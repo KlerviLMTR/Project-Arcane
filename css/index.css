@@ -1,0 +1,66 @@
+
+/* Mode sombre */
+#body {
+    background-color: #040404;
+    position: absolute ;
+    width: 100% ;
+    top: 0px ;
+    left: 0px ;
+}
+.main_Pic {
+    display: block ;
+    width: 100% ;
+    height: auto ;
+}
+
+header {
+    /* définition de la flexbox */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    /* Style du menu */
+    height: 80px ;
+    position: sticky;
+    top: 0 ;
+    background-color: #040404;  
+}
+
+#flexContainer{
+    /* définition de la flexbox */
+    display: flex ;
+    justify-content: space-evenly;  
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu{
+    /*Style des boutons de menu*/
+    margin : 0px 50px ;
+}
+
+main{
+    text-align: center;
+}
+h1, h2 {
+
+    color: aliceblue;
+    font-size: 2em;
+}
+
+p {
+    margin : auto ;
+    text-align: justify;
+    color:aliceblue;
+    font-size: 1em;
+    width: 50%;
+    height: auto;
+}
+
+iframe {
+
+}
+
+
