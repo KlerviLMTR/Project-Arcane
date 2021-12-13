@@ -3,7 +3,10 @@
 }
 
 #checkbox {
-    position:fixed;
+    position:absolute;
+    width:50px;
+    top: 100px;
+    height:20px;
     background-color: burlywood;
 }
 /*
