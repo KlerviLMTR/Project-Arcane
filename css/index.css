@@ -1,84 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Rambla&display=swap');
-
-#checkbox {
-    position: relative ;
-    top:150px;
-    z-index: 2;
-    background-color: cornsilk;
-    border-radius: 2px;
-    }
-
-/* Mode sombre */
-#body {
-    background-color: #040404;
-    position: absolute ;
-    width: 100% ;
-    top: 0px ;
-    left: 0px ;
-}
-.main_Pic {
-    margin: auto;
-    display: block ;
-    width: 70% ;
-    height: auto ;
-}
-
-header {
-    /* définition de la flexbox */
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    flex-direction: row;
-
-    /* Style du menu */
-    margin:auto;
-    width:70%;
-    height: 80px ;
-    position: sticky;
-    top: 0 ;
-    background-color: #040404;  
-    box-shadow : 0px 10px 50px 0px rgb(0, 0, 0);
-}
-
-
-
-
-.flex-item :hover {
-    background: linear-gradient( #99c2b1,black);
-}
-
-a:link {
-    font-family: Rambla;
-    font-size: 20px;
-    color:white;
-    text-decoration:none;
-}
-a:visited {
-    color:white;
-}
-
-#logo{
-    margin : auto 2px auto 3px;
-    position:relative;
-    height : 60px; 
-    width:auto;
-}
-
-#flexContainer{
-    /* définition de la flexbox */
-    display: flex ;
-    justify-content: space-evenly;  
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-}
-
-.flex-item{
-    /*Style des boutons de menu*/
-    margin : 0px 50px ;
-    
-}
-
+/*
+    PAGE D'ACCUEIL
+*/
 main{
     text-align: center;
 }
@@ -98,7 +20,8 @@ p {
 }
 
 iframe {
-    border: 1px solid burlywood;
-}
+    /* border: 1px solid burlywood; */
 
+    border-image: url('../images/logo_iut_info.PNG') 30 fill;
+}
 
