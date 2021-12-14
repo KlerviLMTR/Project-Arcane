@@ -1,0 +1,27 @@
+/*
+    PAGE D'ACCUEIL
+*/
+main{
+    text-align: center;
+}
+h1, h2 {
+
+    color: aliceblue;
+    font-size: 2em;
+}
+
+p {
+    margin : auto ;
+    text-align: center;
+    color:aliceblue;
+    font-size: 1.5em;
+    width: 50%;
+    height: auto;
+}
+
+iframe {
+    /* border: 1px solid burlywood; */
+
+    border-image: url('../images/logo_iut_info.PNG') 30 fill;
+}
+
