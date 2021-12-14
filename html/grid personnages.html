@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #body{
+            width: 50%;
+            margin-left:10vw;
+            background-color: #ffffff;
+        }
+
+        #grid_container {
+            display:grid;
+            row-gap: 3px;
+            column-gap: 2px;
+            grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+            grid-template-rows:auto;
+            grid-template-areas: "pic1 txt1 txt1"
+                                 "sep1 sep1 sep1"
+                                 "txt2 txt2 pic2"
+                                 "sep2 sep2 sep2"
+                                 "pic3 txt3 txt3" 
+                                 "sep3 sep3 sep3"
+                                 "txt4 txt4 pic4"
+                                 "sep4 sep4 sep4"
+                                 "pic5 txt5 txt5"
+                                 "sep5 sep5 sep5"
+                                 "txt6 txt6 pic6"
+                                 "sep6 sep6 sep6"
+                                 "pic7 txt7 txt7"
+                                 "sep7 sep7 sep7" 
+                                 "txt8 txt8 pic8";
+        }
+
+        #pic1 {
+            grid-area:pic1;
+
+            place-self: start;
+        }
+
+        #pic1 img {
+
+     
+        }
+
+        #pic2 {
+            grid-area:pic2;
+
+        }
+
+        #pic3 {
+            grid-area:pic3;
+
+        }
+
+        #pic4 {
+            grid-area:pic4;
+
+        }
+
+        #pic5 {
+            grid-area:pic5;
+
+        }
+
+        #pic6 {
+            grid-area:pic6;
+
+        }
+
+        #pic7 {
+            grid-area:pic7;
+
+        }
+
+        #pic8 {
+            grid-area:pic8;
+
+        }
+
+        #char1{
+            grid-area:txt1;
+
+           
+        }
+        #char2{
+            grid-area:txt2;
+
+        }
+        #char3{
+            grid-area:txt3;
+
+        }
+        #char4{
+            grid-area:txt4;
+
+        }
+        #char5{
+            grid-area:txt5;
+
+        }
+        #char6{
+            grid-area:txt6;
+
+        }
+        #char7{
+            grid-area:txt7;
+
+        }
+        #char8{
+            grid-area:txt8;
+
+        }
+        #sep1{
+            grid-area:sep1;
+
+        }
+        #sep2{
+            grid-area:sep2;
+
+        }
+        #sep3{
+            grid-area:sep3;
+
+        }
+        #sep4{
+            grid-area:sep4;
+
+        }
+        #sep5{
+            grid-area:sep5;
+
+        }
+        #sep6{
+            grid-area:sep6;
+
+        }
+        #sep7{
+            grid-area:sep7;
+
+        }
+        
+        .sep_cont{
+            height:75px;  
+        }
+
+        .sep_cont img {
+            position: relative;
+            max-height: 80%;
+            width: 95%;
+            top:15%;
+
+        }
+
+        /* Caractéristiques des images */
+        .img{
+          background-color: blueviolet;
+          height: 260px;
+          width:225px;
+        }
+
+        .txt{
+            background-color: darkgrey;
+        }
+
+        .portrait {
+            position: relative;
+            height:200px;
+            width:auto;
+        }
+
+    
+
+    </style>
+</head>
+<body>
+    <div id="body">
+        <div id="grid_container">
+
+            <div id="pic1" class="img">a
+                <img src="./Jinx-transparent.png" class="portrait" alt="Portrait Jinx/Powder">
+            </div>
+            
+            <div id="pic2" class="img">a
+                <img src="./Vi-transparent.png" class="portrait" alt="">
+            </div>
+
+            <div id="pic3" class="img">a
+                <img src="./Jayce-transparent.png" class="portrait" alt="">
+            </div>
+
+            <div id="pic4" class="img">a
+                <img src="./Viktor-transparent.png" class="portrait" alt="">
+            </div>
+
+            <div id="pic5" class="img">a
+                <img src="./Cait-transparent.png" class="portrait" alt="">
+            </div>
+
+            <div id="pic6" class="img">a
+                <img src="./Silco-transparent.png" class="portrait" alt="">
+            </div>
+
+            <div id="pic7" class="img">a
+                <img src="./Vander-transparent.png" class="portrait" alt="">
+            </div>
+
+            <div id="pic8" class="img">a
+                <img src="./Mel-transparent.png" class="portrait" alt="">
+            </div>
+
+            <div id="char1" class="txt">1 </div>
+            <div id="char2" class="txt">2</div>
+            <div id="char3" class="txt">3</div>
+            <div id="char4" class="txt">4</div>
+            <div id="char5" class="txt">5</div>
+            <div id="char6" class="txt">6</div>
+            <div id="char7" class="txt">7</div>
+            <div id="char8" class="txt">8</div>
+
+            <div class="sep_cont" id="sep1">
+                <img src="./underline2.svg" alt="Séparateur stylisé art-déco">
+            </div>
+            <div class="sep_cont" id="sep2">
+                <img src="./underline2.svg" alt="Séparateur stylisé art-déco">
+            </div>
+            <div class="sep_cont" id="sep3">
+                <img src="./underline2.svg" alt="Séparateur stylisé art-déco">
+            </div>
+            <div class="sep_cont" id="sep4">
+                <img src="./underline2.svg" alt="Séparateur stylisé art-déco">
+            </div>
+            <div class="sep_cont" id="sep5">
+                <img src="./underline2.svg" alt="Séparateur stylisé art-déco">
+            </div>
+            <div class="sep_cont" id="sep6">
+                <img src="./underline2.svg" alt="Séparateur stylisé art-déco">
+            </div>
+            <div class="sep_cont" id="sep7">
+                <img src="./underline2.svg" alt="Séparateur stylisé art-déco">
+            </div>
+
+    </div>
+    
+</div>
+</body>
+</html>
