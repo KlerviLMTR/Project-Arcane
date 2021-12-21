@@ -199,10 +199,10 @@ body {
 .hover_underline{
     transition: transform 0.3s;
     transform:scaleX(0);
-    transition-timing-function: ease-out;
+    transition-timing-function: all ease-in-out;
 }
 
-/* effet de soulignage: ici, on n'appelle la div crée pour cet effet uniquement lors du survol des conteneurs des liens */
+/* effet de soulignage: ici, on n'appelle la div créee pour cet effet uniquement lors du survol des conteneurs des liens */
 .flex_item:hover>.hover_underline {
     position: absolute;
     left:0;
