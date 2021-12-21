@@ -1,30 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
 
 
 
 
 html{
     overflow-x: hidden;
+    height:100%
 }
 
-body {
-    background-color: rgb(255, 255, 255);
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    width: 80%;
-    margin-left: 10%;
-    display: flex;
-    flex-direction: column;
-}
-
-#body {
-    position: relative;
-    height: 1500px;
-}
 
 #checkbox{
     position:fixed;
@@ -32,19 +17,22 @@ body {
     right:13vw;
     z-index: 2;
 
-    /* Style de la checkbox */
+    /* Style de la checkbox avant sélection*/
     appearance: none;
     width:65px;
     height:35px; 
     background-color: white;
-    border: 2.5px solid rgb(201, 110, 43);
+    border: 2.5px solid #d39332;
     border-radius: 25px;
     box-shadow: 0px 2px 8px 2px rgb(214, 214, 214);
-    
-    
 }
 
-
+#checkbox:checked{
+    /* Style de la checkbox après sélection */
+    background-color: rgb(2, 89, 104);
+    border: 2px solid rgb(214, 214, 214);
+    box-shadow: 0px 2px 8px 3px rgb(17, 17, 17);
+}
 
 #checkbox::before{
     /* Style du curseur */
@@ -57,7 +45,7 @@ body {
     height:26px;
     top:2.5px;
     left:2.5px;   
-    background-color: #4E9CC2;
+    background-color: #d8a579;
     border-radius: 25px;
     transition:0.4s ;
 }
@@ -65,20 +53,61 @@ body {
 #checkbox:checked::before{
     left:31px;
     transition-timing-function: ease-out;
+    background-color:  rgb(214, 214, 214);
 }
 
 
+/* ------------------ Définition du corps principal -------------------- */
+
+body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+#checkbox:checked+#body_borders+#body{
+    background-color: #090D0E;
+}
+
+#body {
+    position: relative;
+    height: 3000px;
+    width:80%;
+    margin-left: 10vw;
+    background-color: white;
+}
+
+#body_borders{
+    position: absolute;
+    width: 100%;
+    height: 3000px;
+    margin-left: 0;
+    z-index: -2;
+    background-color: #ffffff;
+}
+
+#checkbox:checked+#body_borders{
+    background-color: #090D0E;
+}
 
 /* --------------------------HEADER----------------------------------------*/
 
 /* Ajout d'un bandeau "bordure" accompagnant le menu */
+
 #bandeau{
     position: fixed;
     top: 0;
     left: 0;
     width:100vw;
     height:80px;
-    background: linear-gradient(0deg, rgb(201, 198, 198) 0%, rgba(255,255,255,1) 7%);
+    background: linear-gradient(0deg, rgba(226,192,192,1) 0%, rgba(255,255,255,1) 8%);
+}
+
+#checkbox:checked+#body_borders+#body>#bandeau {
+    background: rgb(24,27,26);
+    background: linear-gradient(0deg, rgba(24,27,26,1) 3%, rgba(38,47,46,1) 11%);
 }
 /* --------- Navbar --------- */
 
@@ -90,7 +119,8 @@ body {
     top:0px;
     width:100%;
     height:80px;
-    background: linear-gradient(0deg, rgb(192, 191, 189) 0%, rgba(255,255,255,1) 7%);
+    background: linear-gradient(0deg, rgba(226,192,192,1) 0%, rgba(255,255,255,1) 8%);
+
     z-index: 1;
 
     /* définition de la flexbox */
@@ -99,6 +129,10 @@ body {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+}
+#checkbox:checked+#body_borders+#body>#header {
+    background: rgb(24,27,26);
+    background: linear-gradient(0deg, rgba(24,27,26,1) 3%, rgba(38,47,46,1) 11%);
 }
 
 /* Conteneur flex1 : Div vide pour laisser l'espace entre le logo et le menu */
@@ -153,47 +187,58 @@ body {
     /* comme on est en inline-block, le texte se centre par rapport à la taille du parent */
     text-align: center;
 }
+
+#checkbox:checked+#body_borders+#body>#header>#flex_container>.flex_item>a {
+   color:rgb(209, 220, 224);
+}
+
 .flex_item>a:visited{
     color:black;
 }
-
-
 
 .hover_underline{
     transition: transform 0.3s;
     transform:scaleX(0);
     transition-timing-function: ease-out;
 }
+
 /* effet de soulignage: ici, on n'appelle la div crée pour cet effet uniquement lors du survol des conteneurs des liens */
 .flex_item:hover>.hover_underline {
     position: absolute;
     left:0;
     bottom: 0px;
-    background-color: rgb(201, 110, 43);
+    background-color: #f8a3a3;
     width: 100%;
     height:1px;
-    border: 2px solid rgb(201, 110, 0);
+    border: 2px solid #f8a3a3;
     border-radius: 20px;
-    transform:scaleX(1)
-    
-
-    
- 
+    transform:scaleX(1);
 }
+
+/* effet de soulignage :Mode sombre */
+#checkbox:checked+#body_borders+#body>#header>#flex_container>.flex_item:hover>.hover_underline{
+    background-color:rgb(49, 139, 135);
+    border: 2px solid rgb(49, 139, 135);
+ }
 
 /* Flex de la case "personnages" qui est plus grande */
 #flex_persos{
     flex:1.5;
 }
 
+/* ---------------------- IMAGE PRINCIPALE ---------------------- */
+/* ¨---- Partie1: paramètres généraux ---- */
 #main_img{
    position: relative;  
    height:510px;
    overflow: hidden;
-   border: 1px solid rgb(201, 110, 43);
-
-
+   border: 1px solid #f8a3a3;
 }
+/* Conteneur de l'image: mode sombre */
+#checkbox:checked+#body_borders+#body>#main_img{
+    border:1px solid #090D0E;
+}
+
 
 #light_img, #dark_img{
     display: block;
@@ -205,46 +250,91 @@ body {
     transition-timing-function: ease-out;
 }
 
-#light_img:hover{
+#light_img:hover, #dark_img:hover{
     transform: scale(1.05);
 }
 
+/* ---- Partie2 : effets sélection checkbox ---- */
 #dark_img {
     visibility: hidden;
 }
+#checkbox:checked+#body_borders+#body>#main_img>#light_img{
+    visibility: hidden;
+}
+#checkbox:checked+#body_borders+#body>#main_img>#dark_img{
+    visibility: visible;
+}
+
+
 
 #background_container{
-    position:relative;
-    top:0;
+    position:sticky;
+    top:400px;
 }
 #background_img{
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     left:-10vw;
     opacity: 50%;
     
+}
+
+#checkbox:checked+#body_borders+#body>#background_container>#background_img{
+    opacity: 35%;
 }
 
 
 /* Création du footer, 100% de l'écran, et déplacé vers la gauche*/
 #footer{
     width: 100%;
-    height: 200px;
+    height: 100x;
     position: absolute;
     z-index: 10;
     bottom:0;
-    background-color: rgb(252, 237, 237);
+    background-color: #997e7e; 
+    display: flex;
+    align-items:center;
+}
+#checkbox:checked+#body_borders+#body>#bas_de_page{
+    background-color: rgb(32, 68, 75);
 }
 
 #bas_de_page{
     position: absolute;
-    height:200px;
+    height:100px;
     bottom: 0;
     left: -10vw;
     width:100vw;
-    background-color: rgb(252, 237, 237);
+    background-color: #997e7e; 
 
 }
+
+#checkbox:checked+#body_borders+#body>#footer{
+    background-color: rgb(32, 68, 75);
+}
+
+/* FOOTER */
+
+.flex_itm_footer{
+    display: block;
+    flex:1;
+    margin: 25px;
+    text-align: center;
+}
+.flex_itm_footer>a {
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-weight: bolder;
+    color:white;
+
+}
+.flex_itm_footer>a:visited {
+    color:white;
+}
+
+
+
+
 
 @media screen and (min-width:600px) and (max-width:900px) {
     #void {
