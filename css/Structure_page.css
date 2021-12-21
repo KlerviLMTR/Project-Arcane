@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+
 
 
 html{
     overflow-x: hidden;
 }
+
 body {
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(255, 255, 255);
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -15,10 +21,15 @@ body {
     flex-direction: column;
 }
 
+#body {
+    position: relative;
+    height: 1500px;
+}
+
 #checkbox{
     position:fixed;
     top:20px;
-    right:13%;
+    right:13vw;
     z-index: 2;
 
     /* Style de la checkbox */
@@ -26,20 +37,52 @@ body {
     width:65px;
     height:35px; 
     background-color: white;
-    border: 3px solid lightcoral;
-    border-radius: 10px;
+    border: 2.5px solid rgb(201, 110, 43);
+    border-radius: 25px;
+    box-shadow: 0px 2px 8px 2px rgb(214, 214, 214);
+    
     
 }
 
-/* Ajout d'un bandeau accompagnant le menu */
+
+
+#checkbox::before{
+    /* Style du curseur */
+    /* content:nécéssité de mettre un contenu vide sinon rien ne s'affiche */
+    content:'';
+    
+    cursor:pointer;
+    position: absolute;
+    width:26px;
+    height:26px;
+    top:2.5px;
+    left:2.5px;   
+    background-color: #4E9CC2;
+    border-radius: 25px;
+    transition:0.4s ;
+}
+
+#checkbox:checked::before{
+    left:31px;
+    transition-timing-function: ease-out;
+}
+
+
+
+/* --------------------------HEADER----------------------------------------*/
+
+/* Ajout d'un bandeau "bordure" accompagnant le menu */
 #bandeau{
     position: fixed;
     top: 0;
     left: 0;
     width:100vw;
     height:80px;
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgb(201, 198, 198) 0%, rgba(255,255,255,1) 7%);
 }
+/* --------- Navbar --------- */
+
+/*---- Partie 1: structure globale de la navbar ---- */
 
 #header {
     /* Style du menu */
@@ -47,7 +90,7 @@ body {
     top:0px;
     width:100%;
     height:80px;
-    background-color: white;
+    background: linear-gradient(0deg, rgb(192, 191, 189) 0%, rgba(255,255,255,1) 7%);
     z-index: 1;
 
     /* définition de la flexbox */
@@ -58,10 +101,12 @@ body {
     align-items: center;
 }
 
-/* Div vide pour laisser l'espace entre le logo et le menu */
+/* Conteneur flex1 : Div vide pour laisser l'espace entre le logo et le menu */
 #void {
     flex:1;
 }
+
+/* Conteneur flex 2 : conteneur destiné au logo*/
 
 #logo { 
     flex:1;
@@ -70,23 +115,70 @@ body {
     width:auto;
     display: flex;
     align-items: center;
-
 }
+
 #logo img{
     width:100%;
-    /* height: 100%; */
     margin: auto;
 }
 
-/* Conteneur des boutons du menu */
+/* Conteneur flex 3: conteneur des boutons du menu*/
 #flex_container {
     display: flex;
     flex: 3;
     justify-content: flex-end;
+
 }
 
+/* ---- Partie 2: Définition du menu ----*/
+
+/* Définition des boutons */
 .flex_item{
     flex:1;
+    position: relative;
+    height: 80px; 
+}
+
+/* Personnalisation des liens */
+.flex_item>a {
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-weight: bolder;
+    position: absolute; 
+    width:100%;
+    top:45%;
+    font-size: 18px;
+    /* inline block: la taille des liens prend la taille du conteneur parent flexItem */
+    display: inline-block   ;
+    /* comme on est en inline-block, le texte se centre par rapport à la taille du parent */
+    text-align: center;
+}
+.flex_item>a:visited{
+    color:black;
+}
+
+
+
+.hover_underline{
+    transition: transform 0.3s;
+    transform:scaleX(0);
+    transition-timing-function: ease-out;
+}
+/* effet de soulignage: ici, on n'appelle la div crée pour cet effet uniquement lors du survol des conteneurs des liens */
+.flex_item:hover>.hover_underline {
+    position: absolute;
+    left:0;
+    bottom: 0px;
+    background-color: rgb(201, 110, 43);
+    width: 100%;
+    height:1px;
+    border: 2px solid rgb(201, 110, 0);
+    border-radius: 20px;
+    transform:scaleX(1)
+    
+
+    
+ 
 }
 
 /* Flex de la case "personnages" qui est plus grande */
@@ -94,15 +186,13 @@ body {
     flex:1.5;
 }
 
-a{
-    font-family: 'Rambla', sans-serif;
-    text-decoration: none;
-    color:black;
-}
-
 #main_img{
    position: relative;  
-   height:570px;
+   height:510px;
+   overflow: hidden;
+   border: 1px solid rgb(201, 110, 43);
+
+
 }
 
 #light_img, #dark_img{
@@ -111,20 +201,49 @@ a{
     position: absolute;
     top:0;
     left:0;
+    transition: transform 1s;
+    transition-timing-function: ease-out;
+}
+
+#light_img:hover{
+    transform: scale(1.05);
 }
 
 #dark_img {
     visibility: hidden;
 }
 
+#background_container{
+    position:relative;
+    top:0;
+}
+#background_img{
+    position: absolute;
+    z-index: -1;
+    left:-10vw;
+    opacity: 50%;
+    
+}
+
 
 /* Création du footer, 100% de l'écran, et déplacé vers la gauche*/
-footer{
-    width: 100vw;
-    height: 80px;
-    background-color: rgb(255, 255, 255);
-    position: relative;
+#footer{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    z-index: 10;
+    bottom:0;
+    background-color: rgb(252, 237, 237);
+}
+
+#bas_de_page{
+    position: absolute;
+    height:200px;
+    bottom: 0;
     left: -10vw;
+    width:100vw;
+    background-color: rgb(252, 237, 237);
+
 }
 
 @media screen and (min-width:600px) and (max-width:900px) {
