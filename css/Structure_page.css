@@ -25,6 +25,7 @@ html{
     overflow-x: hidden;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 body {
@@ -48,6 +49,10 @@ body {
 }
 =======
     height:100%
+=======
+    /* height:100%; */
+    /* width: 100%; */
+>>>>>>> bf4982f (Structure ok)
 }
 
 >>>>>>> ef87c11 (Copie du projet initial)
@@ -57,11 +62,16 @@ body {
     top:20px;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     right:13%;
 =======
     right:13vw;
 >>>>>>> 1c0c83f (ajouts structure)
     z-index: 2;
+=======
+    right:10vw;
+    z-index: 3;
+>>>>>>> bf4982f (Structure ok)
 
 <<<<<<< HEAD
     /* Style de la checkbox */
@@ -164,6 +174,7 @@ body {
     width: 100%;
     height: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
     overflow-y: visible;
     overflow-x: hidden;
 }
@@ -175,6 +186,9 @@ body {
 #body {
     position: absolute;
 =======
+=======
+    overflow-x: hidden;
+>>>>>>> bf4982f (Structure ok)
 }
 
 #checkbox:checked+#body_borders+#body{
@@ -188,6 +202,7 @@ body {
     width:80%;
     margin-left: 10vw;
     background-color: white;
+
 }
 
 #body_borders{
@@ -254,12 +269,13 @@ body {
 
 #header {
     /* Style du menu */
-    position: sticky;
+    position: fixed;
     top:0px;
-    width:100%;
+    width:80%;
     height:80px;
     background: linear-gradient(0deg, rgba(226,192,192,1) 0%, rgba(255,255,255,1) 8%);
 
+<<<<<<< HEAD
     z-index: 1;
 =======
     background: linear-gradient(0deg, rgba(226,192,192,1) 0%, rgba(255,255,255,1) 8%);
@@ -283,6 +299,9 @@ body {
 
     z-index: 2;
 >>>>>>> 6beafbd (Index et personnages sans ajustements)
+=======
+    z-index: 2;
+>>>>>>> bf4982f (Structure ok)
 
     /* définition de la flexbox */
     display: flex;
@@ -352,6 +371,11 @@ body {
     margin: auto;
 }
 
+#logo a{
+    width:250px;
+    margin: auto;
+}
+
 #logo img{
     width:100%;
     margin: auto;
@@ -366,7 +390,6 @@ body {
     display: flex;
     flex: 3;
     justify-content: flex-end;
-
 }
 
 <<<<<<< HEAD
@@ -432,14 +455,16 @@ body {
 
 /* Flex de la case "personnages" qui est plus grande */
 #flex_persos{
-    flex:1.5;
+    flex:2;
 }
 
 /* ---------------------- IMAGE PRINCIPALE ---------------------- */
 /* ¨---- Partie1: paramètres généraux ---- */
 #main_img{
    position: relative;  
-   height:510px;
+   top:80px;
+   width:99%;
+   height: calc(80vw * 0.415);
    overflow: hidden;
    border: 1px solid #f8a3a3;
 }
@@ -564,11 +589,18 @@ body {
 }
 
 
-
+/* ------------------ IMAGE DE FOND -------------------- */
 #background_container{
     position:sticky;
     top:400px;
+    left:0;
+    width: 100vw;
 }
+
+#background_container img{
+    width: 100%;
+}
+
 #background_img{
     position: absolute;
     z-index: 0;
@@ -582,10 +614,11 @@ body {
 }
 
 
-/* Création du footer, 100% de l'écran, et déplacé vers la gauche*/
+/* -------------------- FOOTER -----------------------------*/
+/* ---- Partie 1 : Définition du conteneur footer flex ---- */
 #footer{
     width: 100%;
-    height: 100x;
+    height: 100px;
     position: absolute;
     z-index: 10;
     bottom:0;
@@ -593,6 +626,12 @@ body {
     display: flex;
     align-items:center;
 }
+
+#checkbox:checked+#body_borders+#body>#footer{
+    background-color: rgb(32, 68, 75);
+}
+
+/* ---- Partie 2 : Bordures qui accomagnent le footer ---- */
 #checkbox:checked+#body_borders+#body>#bas_de_page{
     background-color: rgb(32, 68, 75);
 }
@@ -607,11 +646,7 @@ body {
 
 }
 
-#checkbox:checked+#body_borders+#body>#footer{
-    background-color: rgb(32, 68, 75);
-}
-
-/* FOOTER */
+/* ---- Partie  3 : Définition des éléments flex + contenu  ---- */
 
 .flex_itm_footer{
     display: block;
@@ -631,14 +666,172 @@ body {
 }
 
 
+/* --------------------- MENU DEROULANT ----------------------*/
+
+label, #toggle{
+    display: none;
+}
+
+/* -------------------- MEDIA QUERIES -------------------------- */
+
+/* Ecrans "tablette" */
+@media screen and (max-width: 1050px){
+ 
+    #flex_container
+    {
+        display: none;
+        flex-direction: column;
+        background: white;
+        height: 240px;
+    }
+ 
+    #flex_container a {
+        width: 50%;
+    }
+
+    #void{
+        flex:0.5;
+    }
+ 
+    label {
+        width: 30px;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: #704f4f;
+        cursor: pointer;
+    }
+
+    #checkbox:checked + #body_borders+#body label{
+        color: white;
+    }
+
+    .flex_item{
+        padding-left: 80px;
+        width:76%;
+    }
 
 
+    #flex_persos{
+        flex:1;
+    }
 
-@media screen and (min-width:600px) and (max-width:900px) {
-    #void {
+ 
+    #toggle:checked + #flex_container {
+        display: flex;
+        position: absolute;
+        top:60px;
+        width: 350px;
+    }
+
+    #checkbox:checked + #body_borders + #body #flex_container {
+        background-color:#262f2e;
+    }
+
+    #checkbox{
+       
+        right:9vw;
+    }
+
+}
+/* Petits écrans */
+@media screen and (min-width: 300px) and (max-width:600px) {
+    
+   label{
+       font-size: 30px;
+   }
+
+    #void{
         flex:0;
     }
+
+    .flex_item{
+        padding-left: 25%;
+    }
+    
+    #toggle:checked + #flex_container{
+        width: 100vw;
+    }
+
+    .flex_item:hover>.hover_underline {
+
+        width: 80%;
+        margin-left: 10%;
+
+    }
+
 }
+
+@media screen and (min-width: 401px) and (max-width:600px) {
+    
+   label{
+       margin: 0 30px 0 0 ;
+   }
+
+    #logo a{
+        width:190px;
+    }
+
+    #checkbox{
+        right:7vw;
+    }
+
+}
+
+/* Très petits écrans */
+@media screen and (min-width: 300px) and (max-width:400px) {
+
+    
+
+    #header{
+        height:60px;
+    }
+
+    #bandeau{
+        height:60px;
+    }
+
+    #logo a{
+        width:150px;
+    }
+    #checkbox{
+       
+        right:7vw;
+        top: 1.7vh;
+    }
+    #checkbox{
+
+        width:35px;
+        height:25px; 
+
+    }
+
+    
+    #checkbox::before{
+
+        width:15px;
+        height:15px;
+        top:2.5px;
+        left:2.5px;   
+    }
+    
+    #checkbox:checked::before{
+        left:14px;
+        transition-timing-function: ease-out;
+        background-color:  rgb(214, 214, 214);
+    }
+
+    .flex_itm_footer{
+        margin: 0;
+    }
+
+}
+
+
+
 
 
 
