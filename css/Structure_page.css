@@ -169,7 +169,6 @@ body {
     display: flex;
     flex: 3;
     justify-content: flex-end;
-
 }
 
 /* ---- Partie 2: Définition du menu ----*/
@@ -238,6 +237,7 @@ body {
 /* ¨---- Partie1: paramètres généraux ---- */
 #main_img{
    position: relative;  
+   top:80px;
    width:99%;
    height: calc(80vw * 0.415);
    overflow: hidden;
@@ -275,7 +275,7 @@ body {
 }
 
 
-
+/* ------------------ IMAGE DE FOND -------------------- */
 #background_container{
     position:sticky;
     top:400px;
@@ -300,10 +300,11 @@ body {
 }
 
 
-/* Création du footer, 100% de l'écran, et déplacé vers la gauche*/
+/* -------------------- FOOTER -----------------------------*/
+/* ---- Partie 1 : Définition du conteneur footer flex ---- */
 #footer{
     width: 100%;
-    height: 100x;
+    height: 100px;
     position: absolute;
     z-index: 10;
     bottom:0;
@@ -311,6 +312,12 @@ body {
     display: flex;
     align-items:center;
 }
+
+#checkbox:checked+#body_borders+#body>#footer{
+    background-color: rgb(32, 68, 75);
+}
+
+/* ---- Partie 2 : Bordures qui accomagnent le footer ---- */
 #checkbox:checked+#body_borders+#body>#bas_de_page{
     background-color: rgb(32, 68, 75);
 }
@@ -325,11 +332,7 @@ body {
 
 }
 
-#checkbox:checked+#body_borders+#body>#footer{
-    background-color: rgb(32, 68, 75);
-}
-
-/* FOOTER */
+/* ---- Partie  3 : Définition des éléments flex + contenu  ---- */
 
 .flex_itm_footer{
     display: block;
@@ -349,17 +352,16 @@ body {
 }
 
 
-/* MENU DEROULANT */
+/* --------------------- MENU DEROULANT ----------------------*/
 
 label, #toggle{
     display: none;
 }
 
+/* -------------------- MEDIA QUERIES -------------------------- */
 
-
-@media screen and (max-width: 1050px)
-{
-
+/* Ecrans "tablette" */
+@media screen and (max-width: 1050px){
  
     #flex_container
     {
@@ -377,8 +379,7 @@ label, #toggle{
         flex:0.5;
     }
  
-    label 
-    {
+    label {
         width: 30px;
         display: flex;
         flex: 1;
@@ -386,7 +387,7 @@ label, #toggle{
         align-items: center;
         margin: 0 auto;
         font-size: 40px;
-        color: black;
+        color: #704f4f;
         cursor: pointer;
     }
 
@@ -408,7 +409,7 @@ label, #toggle{
     #toggle:checked + #flex_container {
         display: flex;
         position: absolute;
-        top:80px;
+        top:60px;
         width: 350px;
     }
 
@@ -422,7 +423,7 @@ label, #toggle{
     }
 
 }
-
+/* Petits écrans */
 @media screen and (min-width: 300px) and (max-width:600px) {
     
    label{
@@ -466,15 +467,26 @@ label, #toggle{
 
 }
 
-
+/* Très petits écrans */
 @media screen and (min-width: 300px) and (max-width:400px) {
+
+    
+
+    #header{
+        height:60px;
+    }
+
+    #bandeau{
+        height:60px;
+    }
+
     #logo a{
         width:150px;
     }
     #checkbox{
        
         right:7vw;
-        top: 3vh;
+        top: 1.7vh;
     }
     #checkbox{
 
@@ -496,6 +508,10 @@ label, #toggle{
         left:14px;
         transition-timing-function: ease-out;
         background-color:  rgb(214, 214, 214);
+    }
+
+    .flex_itm_footer{
+        margin: 0;
     }
 
 }
