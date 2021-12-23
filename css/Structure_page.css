@@ -7,15 +7,16 @@
 
 html{
     overflow-x: hidden;
-    height:100%
+    /* height:100%; */
+    /* width: 100%; */
 }
 
 
 #checkbox{
     position:fixed;
     top:20px;
-    right:13vw;
-    z-index: 2;
+    right:10vw;
+    z-index: 3;
 
     /* Style de la checkbox avant sélection*/
     appearance: none;
@@ -65,6 +66,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 #checkbox:checked+#body_borders+#body{
@@ -77,6 +79,7 @@ body {
     width:80%;
     margin-left: 10vw;
     background-color: white;
+
 }
 
 #body_borders{
@@ -115,13 +118,13 @@ body {
 
 #header {
     /* Style du menu */
-    position: sticky;
+    position: fixed;
     top:0px;
-    width:100%;
+    width:80%;
     height:80px;
     background: linear-gradient(0deg, rgba(226,192,192,1) 0%, rgba(255,255,255,1) 8%);
 
-    z-index: 1;
+    z-index: 2;
 
     /* définition de la flexbox */
     display: flex;
@@ -149,6 +152,11 @@ body {
     width:auto;
     display: flex;
     align-items: center;
+}
+
+#logo a{
+    width:250px;
+    margin: auto;
 }
 
 #logo img{
@@ -223,14 +231,15 @@ body {
 
 /* Flex de la case "personnages" qui est plus grande */
 #flex_persos{
-    flex:1.5;
+    flex:2;
 }
 
 /* ---------------------- IMAGE PRINCIPALE ---------------------- */
 /* ¨---- Partie1: paramètres généraux ---- */
 #main_img{
    position: relative;  
-   height:510px;
+   width:99%;
+   height: calc(80vw * 0.415);
    overflow: hidden;
    border: 1px solid #f8a3a3;
 }
@@ -270,7 +279,14 @@ body {
 #background_container{
     position:sticky;
     top:400px;
+    left:0;
+    width: 100vw;
 }
+
+#background_container img{
+    width: 100%;
+}
+
 #background_img{
     position: absolute;
     z-index: 0;
@@ -333,14 +349,159 @@ body {
 }
 
 
+/* MENU DEROULANT */
+
+label, #toggle{
+    display: none;
+}
 
 
 
-@media screen and (min-width:600px) and (max-width:900px) {
-    #void {
+@media screen and (max-width: 1050px)
+{
+
+ 
+    #flex_container
+    {
+        display: none;
+        flex-direction: column;
+        background: white;
+        height: 240px;
+    }
+ 
+    #flex_container a {
+        width: 50%;
+    }
+
+    #void{
+        flex:0.5;
+    }
+ 
+    label 
+    {
+        width: 30px;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: black;
+        cursor: pointer;
+    }
+
+    #checkbox:checked + #body_borders+#body label{
+        color: white;
+    }
+
+    .flex_item{
+        padding-left: 80px;
+        width:76%;
+    }
+
+
+    #flex_persos{
+        flex:1;
+    }
+
+ 
+    #toggle:checked + #flex_container {
+        display: flex;
+        position: absolute;
+        top:80px;
+        width: 350px;
+    }
+
+    #checkbox:checked + #body_borders + #body #flex_container {
+        background-color:#262f2e;
+    }
+
+    #checkbox{
+       
+        right:9vw;
+    }
+
+}
+
+@media screen and (min-width: 300px) and (max-width:600px) {
+    
+   label{
+       font-size: 30px;
+   }
+
+    #void{
         flex:0;
     }
+
+    .flex_item{
+        padding-left: 25%;
+    }
+    
+    #toggle:checked + #flex_container{
+        width: 100vw;
+    }
+
+    .flex_item:hover>.hover_underline {
+
+        width: 80%;
+        margin-left: 10%;
+
+    }
+
 }
+
+@media screen and (min-width: 401px) and (max-width:600px) {
+    
+   label{
+       margin: 0 30px 0 0 ;
+   }
+
+    #logo a{
+        width:190px;
+    }
+
+    #checkbox{
+        right:7vw;
+    }
+
+}
+
+
+@media screen and (min-width: 300px) and (max-width:400px) {
+    #logo a{
+        width:150px;
+    }
+    #checkbox{
+       
+        right:7vw;
+        top: 3vh;
+    }
+    #checkbox{
+
+        width:35px;
+        height:25px; 
+
+    }
+
+    
+    #checkbox::before{
+
+        width:15px;
+        height:15px;
+        top:2.5px;
+        left:2.5px;   
+    }
+    
+    #checkbox:checked::before{
+        left:14px;
+        transition-timing-function: ease-out;
+        background-color:  rgb(214, 214, 214);
+    }
+
+}
+
+
+
 
 
 
