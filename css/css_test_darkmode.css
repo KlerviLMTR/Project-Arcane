@@ -3,10 +3,13 @@
 }
 
 #checkbox {
-    position:fixed;
+    position:absolute;
+    width:50px;
+    top: 100px;
+    height:20px;
     background-color: burlywood;
 }
-
+/*
 #checkbox ::before {
     content: '';
     position: absolute;
@@ -18,9 +21,13 @@
     left: 2px;
     cursor: pointer;
     transition: .3s linear;
-}
+}*/
 
-#checkbox:checked + .container{
+#checkbox:checked + .container {
     background-color: rgb(19, 18, 18);
+    color: white;
+  }
+#checkbox:checked + .container > p {
+    background-color: rgb(0, 115, 209);
     color: white;
   }
