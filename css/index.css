@@ -1,27 +1,30 @@
-/*
-    PAGE D'ACCUEIL
-*/
+/* CONTENU DE LA PAGE MAIN */
+
 main{
-    text-align: center;
+    position: relative;
+    top: 100px;
 }
-h1, h2 {
-
-    color: aliceblue;
-    font-size: 2em;
-}
-
-p {
-    margin : auto ;
-    text-align: center;
-    color:aliceblue;
-    font-size: 1.5em;
-    width: 50%;
-    height: auto;
+#vid_container{
+    position: relative;
+    width:640px;
+    height:360px;
+    margin: auto;
 }
 
-iframe {
-    /* border: 1px solid burlywood; */
-
-    border-image: url('../images/logo_iut_info.PNG') 30 fill;
+#ornement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
 }
 
+iframe{
+    position: absolute;
+    top:7.5%;
+    left:5%;
+    width:89.5%;
+    height:85% ;
+} 

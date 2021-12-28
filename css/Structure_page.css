@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+=======
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+
+>>>>>>> 6beafbd (Index et personnages sans ajustements)
 
 
 html{
     overflow-x: hidden;
+<<<<<<< HEAD
 }
 body {
     background-color: rgb(235, 235, 235);
@@ -13,31 +22,122 @@ body {
     margin-left: 10%;
     display: flex;
     flex-direction: column;
+=======
+    /* height:100%; */
+    /* width: 100%; */
+>>>>>>> 6beafbd (Index et personnages sans ajustements)
 }
 
 #checkbox{
     position:fixed;
     top:20px;
+<<<<<<< HEAD
     right:13%;
     z-index: 2;
 
     /* Style de la checkbox */
+=======
+    right:10vw;
+    z-index: 3;
+
+    /* Style de la checkbox avant sélection*/
+>>>>>>> 6beafbd (Index et personnages sans ajustements)
     appearance: none;
     width:65px;
     height:35px; 
     background-color: white;
+<<<<<<< HEAD
     border: 3px solid lightcoral;
     border-radius: 10px;
     
 }
 
 /* Ajout d'un bandeau accompagnant le menu */
+=======
+    border: 2.5px solid #d39332;
+    border-radius: 25px;
+    box-shadow: 0px 2px 8px 2px rgb(214, 214, 214);
+}
+
+#checkbox:checked{
+    /* Style de la checkbox après sélection */
+    background-color: rgb(2, 89, 104);
+    border: 2px solid rgb(214, 214, 214);
+    box-shadow: 0px 2px 8px 3px rgb(17, 17, 17);
+}
+
+#checkbox::before{
+    /* Style du curseur */
+    /* content:nécéssité de mettre un contenu vide sinon rien ne s'affiche */
+    content:'';
+    
+    cursor:pointer;
+    position: absolute;
+    width:26px;
+    height:26px;
+    top:2.5px;
+    left:2.5px;   
+    background-color: #d8a579;
+    border-radius: 25px;
+    transition:0.4s ;
+}
+
+#checkbox:checked::before{
+    left:31px;
+    transition-timing-function: ease-out;
+    background-color:  rgb(214, 214, 214);
+}
+
+
+/* ------------------ Définition du corps principal -------------------- */
+
+body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+
+#checkbox:checked+#body_borders+#body{
+    background-color: #090D0E;
+}
+
+#body {
+    position: relative;
+    height: 3000px;
+    width:80%;
+    margin-left: 10vw;
+    background-color: white;
+}
+
+#body_borders{
+    position: absolute;
+    width: 100%;
+    height: 3000px;
+    margin-left: 0;
+    z-index: -2;
+    background-color: #ffffff;
+}
+
+#checkbox:checked+#body_borders{
+    background-color: #090D0E;
+}
+
+/* --------------------------HEADER----------------------------------------*/
+
+/* Ajout d'un bandeau "bordure" accompagnant le menu */
+
+>>>>>>> 6beafbd (Index et personnages sans ajustements)
 #bandeau{
     position: fixed;
     top: 0;
     left: 0;
     width:100vw;
     height:80px;
+<<<<<<< HEAD
     background-color: rgb(255, 255, 255);
 }
 
@@ -49,6 +149,28 @@ body {
     height:80px;
     background-color: white;
     z-index: 1;
+=======
+    background: linear-gradient(0deg, rgba(226,192,192,1) 0%, rgba(255,255,255,1) 8%);
+}
+
+#checkbox:checked+#body_borders+#body>#bandeau {
+    background: rgb(24,27,26);
+    background: linear-gradient(0deg, rgba(24,27,26,1) 3%, rgba(38,47,46,1) 11%);
+}
+/* --------- Navbar --------- */
+
+/*---- Partie 1: structure globale de la navbar ---- */
+
+#header {
+    /* Style du menu */
+    position: fixed;
+    top:0px;
+    width:80%;
+    height:80px;
+    background: linear-gradient(0deg, rgba(226,192,192,1) 0%, rgba(255,255,255,1) 8%);
+
+    z-index: 2;
+>>>>>>> 6beafbd (Index et personnages sans ajustements)
 
     /* définition de la flexbox */
     display: flex;
@@ -57,12 +179,26 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+<<<<<<< HEAD
 
 /* Div vide pour laisser l'espace entre le logo et le menu */
+=======
+#checkbox:checked+#body_borders+#body>#header {
+    background: rgb(24,27,26);
+    background: linear-gradient(0deg, rgba(24,27,26,1) 3%, rgba(38,47,46,1) 11%);
+}
+
+/* Conteneur flex1 : Div vide pour laisser l'espace entre le logo et le menu */
+>>>>>>> 6beafbd (Index et personnages sans ajustements)
 #void {
     flex:1;
 }
 
+<<<<<<< HEAD
+=======
+/* Conteneur flex 2 : conteneur destiné au logo*/
+
+>>>>>>> 6beafbd (Index et personnages sans ajustements)
 #logo { 
     flex:1;
     position: relative;
@@ -70,6 +206,7 @@ body {
     width:auto;
     display: flex;
     align-items: center;
+<<<<<<< HEAD
 
 }
 #logo img{
@@ -79,12 +216,28 @@ body {
 }
 
 /* Conteneur des boutons du menu */
+=======
+}
+
+#logo a{
+    width:250px;
+    margin: auto;
+}
+
+#logo img{
+    width:100%;
+    margin: auto;
+}
+
+/* Conteneur flex 3: conteneur des boutons du menu*/
+>>>>>>> 6beafbd (Index et personnages sans ajustements)
 #flex_container {
     display: flex;
     flex: 3;
     justify-content: flex-end;
 }
 
+<<<<<<< HEAD
 .flex_item{
     flex:1;
 }
@@ -105,12 +258,94 @@ a{
    height:570px;
 }
 
+=======
+/* ---- Partie 2: Définition du menu ----*/
+
+/* Définition des boutons */
+.flex_item{
+    flex:1;
+    position: relative;
+    height: 80px; 
+}
+
+/* Personnalisation des liens */
+.flex_item>a {
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-weight: bolder;
+    position: absolute; 
+    width:100%;
+    top:45%;
+    font-size: 18px;
+    /* inline block: la taille des liens prend la taille du conteneur parent flexItem */
+    display: inline-block   ;
+    /* comme on est en inline-block, le texte se centre par rapport à la taille du parent */
+    text-align: center;
+    color: black;
+}
+
+#checkbox:checked+#body_borders+#body>#header>#flex_container>.flex_item>a {
+   color:rgb(209, 220, 224);
+}
+
+
+
+.hover_underline{
+    transition: transform 0.3s;
+    transform:scaleX(0);
+    transition-timing-function: all ease-in-out;
+    
+}
+
+/* effet de soulignage: ici, on n'appelle la div créee pour cet effet uniquement lors du survol des conteneurs des liens */
+.flex_item:hover>.hover_underline {
+    position: absolute;
+    left:0;
+    bottom: 0px;
+    background-color: #f8a3a3;
+    width: 100%;
+    height:1px;
+    border: 2px solid #f8a3a3;
+    border-radius: 20px;
+    transform:scaleX(1);
+    /* transition: transform 0.3s; */
+}
+
+/* effet de soulignage :Mode sombre */
+#checkbox:checked+#body_borders+#body>#header>#flex_container>.flex_item:hover>.hover_underline{
+    background-color:rgb(49, 139, 135);
+    border: 2px solid rgb(49, 139, 135);
+ }
+
+/* Flex de la case "personnages" qui est plus grande */
+#flex_persos{
+    flex:2;
+}
+
+/* ---------------------- IMAGE PRINCIPALE ---------------------- */
+/* ¨---- Partie1: paramètres généraux ---- */
+#main_img{
+   position: relative;  
+   top:80px;
+   width:99%;
+   height: calc(80vw * 0.415);
+   overflow: hidden;
+   border: 1px solid #f8a3a3;
+}
+/* Conteneur de l'image: mode sombre */
+#checkbox:checked+#body_borders+#body>#main_img{
+    border:1px solid #090D0E;
+}
+
+
+>>>>>>> 6beafbd (Index et personnages sans ajustements)
 #light_img, #dark_img{
     display: block;
     max-width: 100%;
     position: absolute;
     top:0;
     left:0;
+<<<<<<< HEAD
 }
 
 #dark_img {
@@ -164,3 +399,270 @@ iframe{
     height:85% ;
 } */
 
+=======
+    transition: transform 1s;
+    transition-timing-function: ease-out;
+}
+
+#light_img:hover, #dark_img:hover{
+    transform: scale(1.05);
+}
+
+/* ---- Partie2 : effets sélection checkbox ---- */
+#dark_img {
+    visibility: hidden;
+}
+#checkbox:checked+#body_borders+#body>#main_img>#light_img{
+    visibility: hidden;
+}
+#checkbox:checked+#body_borders+#body>#main_img>#dark_img{
+    visibility: visible;
+}
+
+
+/* ------------------ IMAGE DE FOND -------------------- */
+#background_container{
+    position: sticky;
+    bottom:400px;
+    left:0;
+    width: 105vw;
+}
+
+#background_container img{
+    width: 100%;
+}
+
+#background_img{
+    position: absolute;
+    z-index: 0;
+    left:-10vw;
+    opacity: 50%;
+    
+}
+
+#checkbox:checked+#body_borders+#body>#background_container>#background_img{
+    opacity: 35%;
+}
+
+
+/* -------------------- FOOTER -----------------------------*/
+/* ---- Partie 1 : Définition du conteneur footer flex ---- */
+#footer{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    z-index: 10;
+    bottom:0;
+    background-color: #997e7e; 
+    display: flex;
+    align-items:center;
+}
+
+#checkbox:checked+#body_borders+#body>#footer{
+    background-color: rgb(32, 68, 75);
+}
+
+/* ---- Partie 2 : Bordures qui accomagnent le footer ---- */
+#checkbox:checked+#body_borders+#body>#bas_de_page{
+    background-color: rgb(32, 68, 75);
+}
+
+#bas_de_page{
+    position: relative;
+    height:100px;
+    bottom: -40vh;
+    left: -10vw;
+    width:100vw;
+    background-color: #997e7e; 
+
+}
+
+/* ---- Partie  3 : Définition des éléments flex + contenu  ---- */
+
+.flex_itm_footer{
+    display: block;
+    flex:1;
+    margin: 25px;
+    text-align: center;
+}
+.flex_itm_footer>a {
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-weight: bolder;
+    color:white;
+
+}
+.flex_itm_footer>a:visited {
+    color:white;
+}
+
+
+/* --------------------- MENU DEROULANT ----------------------*/
+
+label, #toggle{
+    display: none;
+}
+
+/* -------------------- MEDIA QUERIES -------------------------- */
+
+/* Ecrans "tablette" */
+@media screen and (max-width: 1050px){
+ 
+    #flex_container
+    {
+        display: none;
+        flex-direction: column;
+        background: white;
+        height: 240px;
+    }
+ 
+    #flex_container a {
+        width: 50%;
+    }
+
+    #void{
+        flex:0.5;
+    }
+ 
+    label {
+        width: 30px;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: #704f4f;
+        cursor: pointer;
+    }
+
+    #checkbox:checked + #body_borders+#body label{
+        color: white;
+    }
+
+    .flex_item{
+        padding-left: 80px;
+        width:76%;
+    }
+
+
+    #flex_persos{
+        flex:1;
+    }
+
+ 
+    #toggle:checked + #flex_container {
+        display: flex;
+        position: absolute;
+        top:60px;
+        width: 350px;
+    }
+
+    #checkbox:checked + #body_borders + #body #flex_container {
+        background-color:#262f2e;
+    }
+
+    #checkbox{
+       
+        right:9vw;
+    }
+
+}
+/* Petits écrans */
+@media screen and (min-width: 300px) and (max-width:600px) {
+    
+    
+   label{
+       font-size: 30px;
+   }
+
+    #void{
+        flex:0;
+    }
+
+    .flex_item{
+        padding-left: 25%;
+    }
+    
+    #toggle:checked + #flex_container{
+        width: 100vw;
+    }
+
+    .flex_item:hover>.hover_underline {
+
+        width: 80%;
+        margin-left: 10%;
+
+    }
+
+    #bas_de_page{
+        bottom: -30vh;
+    }
+
+}
+
+@media screen and (min-width: 401px) and (max-width:600px) {
+    
+   label{
+       margin: 0 30px 0 0 ;
+   }
+
+    #logo a{
+        width:190px;
+    }
+
+    #checkbox{
+        right:7vw;
+    }
+
+}
+
+/* Très petits écrans */
+@media screen and (min-width: 300px) and (max-width:400px) {
+
+    
+
+    #header{
+        height:60px;
+    }
+
+    #bandeau{
+        height:60px;
+    }
+
+    #logo a{
+        width:150px;
+    }
+    #checkbox{
+       
+        right:7vw;
+        top: 1.7vh;
+    }
+    #checkbox{
+
+        width:35px;
+        height:25px; 
+
+    }
+
+    
+    #checkbox::before{
+
+        width:15px;
+        height:15px;
+        top:2.5px;
+        left:2.5px;   
+    }
+    
+    #checkbox:checked::before{
+        left:14px;
+        transition-timing-function: ease-out;
+        background-color:  rgb(214, 214, 214);
+    }
+
+    .flex_itm_footer{
+        margin: 0;
+    }
+
+}
+>>>>>>> 6beafbd (Index et personnages sans ajustements)
