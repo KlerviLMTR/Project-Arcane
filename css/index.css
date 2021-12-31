@@ -1,4 +1,42 @@
+/* ITEM FLEX */
+
+#flex_title{
+    margin-top:30px;
+    position:relative;
+    top: 80px;
+    display:flex;
+    flex-direction: row;
+    height:100px;
+   
+}
+
+#flex_title>img {
+    flex:1;
+    height:100%;
+}
+#title_sep_cont{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+}
+
+#title_sep_cont h1{
+    flex:1;
+}
+#title_sep_cont img{
+    flex:1;
+}
+
+hr{
+    display: none;
+}
+
 /* CONTENU DE LA PAGE MAIN */
+
+main{
+    position: relative;
+    top: 100px;
+}
 
 #vid_container{
     position: relative;
@@ -41,4 +79,10 @@ h2, p{
     }
 }
 
+@media screen and (min-width:1200px) {
+    #vid_container{
+        width: 960px;
+        height: 540px;
+    }
+}
 

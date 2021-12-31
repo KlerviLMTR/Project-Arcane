@@ -197,8 +197,12 @@ body {
 }
 
 #body {
+<<<<<<< HEAD
     position: relative;
 >>>>>>> ef87c11 (Copie du projet initial)
+=======
+    position: absolute;
+>>>>>>> 0242e4d (début des finitions)
     height: 3000px;
     width:80%;
     margin-left: 10vw;
@@ -472,6 +476,7 @@ body {
    height: calc(80vw * 0.415);
    overflow: hidden;
    border: 1px solid #f8a3a3;
+   z-index: 1;
 }
 /* Conteneur de l'image: mode sombre */
 #checkbox:checked+#body_borders+#body>#main_img{
@@ -596,24 +601,6 @@ body {
 
 /* ------------ TITRE DE LA PAGE --------- */
 
-
-
-/* A ENLEVER APRES PAGE DE MISE EN FORME */
-h1{
-    text-align: center;
-    font-family: "Oswald",sans-serif;
-    letter-spacing: 0.3em;
-    font-size:3em;
-    font-weight: 400;
-    padding:0;
-    margin:0;
-}
-
-#checkbox:checked + #body_borders + #body  h1{
-    color:rgb(219, 239, 250);
-}
-/* FIN DU TRUC A ENLEVER */
-
 #flex_title{
     margin-top:30px;
     position:relative;
@@ -648,7 +635,7 @@ hr{
 /* ------------------ IMAGE DE FOND -------------------- */
 #background_container{
     position:sticky;
-    top:400px;
+    bottom:400px;
     left:0;
     width: 100vw;
 }
