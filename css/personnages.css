@@ -1,20 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght:200&display=swap');
 
-h1,h2 {
 
-    font-family: "Oswald", sans-serif;
-    text-transform: uppercase;
-    
 
-}
 
-h1,h2,p,span {
-    color:black;
-}
-/* mode sombre */
-#checkbox:checked + #body_borders + #body h1, #checkbox:checked + #body_borders + #body h2, #checkbox:checked + #body_borders + #body p, #checkbox:checked + #body_borders + #body span {
-    color:rgb(198, 227, 235);
+hr {
+    display: none;
 }
 
 h1 {
@@ -35,32 +25,7 @@ h1 {
     width:80%;
     margin-left:10%;
 }
-hr {
-     display: none;
-}
-h2 {
-    padding-left:10px;
-    margin: 0 0 20px 0;
-    letter-spacing: 12px;
-    font-size:2.8em;
-    letter-spacing: 4px;
-    font-weight: 600;
-}
 
-span {
-    margin:0;
-    font-size: 1.4em;
-    font-weight: 540;
-}
-p{  
-    margin:0;
-    padding-left: 10px;   
-    letter-spacing: 1.5px;
-    text-align:justify;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.3em;
-    font-weight: bold;
-}
 
 .firstW{
     font-family: "Roboto", sans-serif;
@@ -219,6 +184,7 @@ p{
 .img{
   /* background-color: rgb(224, 208, 240); */
   height: 100%;
+  height: calc(65vw/3);
   width:100%;
   background-color: rgb(255, 255, 255);
   border:5px solid white;
@@ -358,7 +324,11 @@ p{
     }
 }
 
-
+@media screen and (min-width:601px) and (max-width: 900px) {
+    .vr{
+        height: 80%;
+    }
+}
 
 
 
@@ -376,8 +346,7 @@ p{
 
 /*  */
 
-    .img{
-        height: 350px;  
+    .img{  
         height: calc(65vw/3);
     } 
     .portrait{
