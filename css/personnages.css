@@ -69,6 +69,22 @@ p{
 
 }
 
+.test{
+    visibility: hidden;
+    left:15%;
+    height:40vh;
+    position: fixed;
+    top:40vh;
+    z-index: 10;
+}
+
+#checkbox:checked + #body_borders + #body .test {
+    visibility: visible;
+    transition:5s;
+    transition-timing-function: ease-in;
+    opacity:0%
+}
+
 /* ------------ STRUCTURE DE LA GRILLE POUR LES ECRANS MOYENS A GRANDS + STYLE DE LA GRILLE ------------- */
 #grid_container {
     z-index: 1;
