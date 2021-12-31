@@ -70,7 +70,7 @@ body {
 }
 
 #checkbox:checked+#body_borders+#body{
-    background-color: #090D0E;
+    background-color: #0c0e0e;
 }
 
 #body {
@@ -91,7 +91,7 @@ body {
 }
 
 #checkbox:checked+#body_borders{
-    background-color: #090D0E;
+    background-color: #0c0e0e;
 }
 
 /* --------------------------HEADER----------------------------------------*/
@@ -409,7 +409,7 @@ label, #toggle{
     #toggle:checked + #flex_container {
         display: flex;
         position: absolute;
-        top:60px;
+        top:80px;
         width: 350px;
     }
 
