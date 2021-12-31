@@ -1,0 +1,84 @@
+
+/* Base du tableau */
+h1{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+table{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+tr{
+    height: 60px;
+}
+
+th, td{
+    
+    padding: 40px 5px;
+}
+
+td{
+    text-align: justify;
+}
+
+/* Ajout des cases noires à fond blanc */
+tr:nth-child(1), 
+tr:nth-child(5), 
+tr:nth-child(9){
+    background-color: rgba(38,47,46,1);
+    color: #d8a579;
+}
+
+#checkbox:checked + #body_borders + #body tr:nth-child(1),
+#checkbox:checked + #body_borders + #body tr:nth-child(5),
+#checkbox:checked + #body_borders + #body tr:nth-child(9){
+    background-color: rgba(38,47,46,1);
+}
+
+
+
+/* Cases à fond beige */
+tr:nth-child(2), 
+tr:nth-child(4), 
+tr:nth-child(7), 
+tr:nth-child(10), 
+tr:nth-child(12){
+    background-color: #d8a579;
+    color: white;
+}
+
+
+
+
+/* Cases à fond blanc */
+tr:nth-child(3), 
+tr:nth-child(6), 
+tr:nth-child(8), 
+tr:nth-child(11){
+    /* color: #d8a579; */
+}
+
+#checkbox:checked + #body_borders + #body tr:nth-child(3),
+#checkbox:checked + #body_borders + #body tr:nth-child(6),
+#checkbox:checked + #body_borders + #body tr:nth-child(8),
+#checkbox:checked + #body_borders + #body tr:nth-child(11){
+    background-color: rgb(209, 220, 224);
+    color:rgb(38,47,46);
+}
+
+
+
+
+/* #checkbox:checked + #body_borders + #body td, 
+#checkbox:checked + #body_borders + #body tr, 
+#checkbox:checked + #body_borders + #body th,
+#checkbox:checked + #body_borders + #body h1 {
+    color: white;
+} */
+

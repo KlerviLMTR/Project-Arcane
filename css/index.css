@@ -1,9 +1,5 @@
 /* CONTENU DE LA PAGE MAIN */
 
-main{
-    position: relative;
-    top: 100px;
-}
 #vid_container{
     position: relative;
     width:640px;
@@ -23,8 +19,26 @@ main{
 
 iframe{
     position: absolute;
-    top:7.5%;
+    top:5%;
     left:5%;
-    width:89.5%;
-    height:85% ;
-} 
+    width:90%;
+    height:90% ;
+}
+
+h1{
+    letter-spacing: 3px;
+}
+
+h2, p{
+    text-align: center;
+}
+
+
+@media screen and (min-width:300px) and (max-width:750px) {
+    #vid_container{
+        width: 300px;
+        height: 170px;
+    }
+}
+
+

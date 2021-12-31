@@ -74,7 +74,7 @@ body {
 }
 
 #body {
-    position: relative;
+    position: absolute;
     height: 3000px;
     width:80%;
     margin-left: 10vw;
@@ -100,6 +100,7 @@ body {
 
 #bandeau{
     position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
     width:100vw;
@@ -242,6 +243,7 @@ body {
    height: calc(80vw * 0.415);
    overflow: hidden;
    border: 1px solid #f8a3a3;
+   z-index: 1;
 }
 /* Conteneur de l'image: mode sombre */
 #checkbox:checked+#body_borders+#body>#main_img{
@@ -278,9 +280,10 @@ body {
 /* ------------------ IMAGE DE FOND -------------------- */
 #background_container{
     position: sticky;
-    bottom:400px;
+    bottom:190px;
     left:0;
     width: 105vw;
+    z-index: 0;
 }
 
 #background_container img{
@@ -391,6 +394,13 @@ label, #toggle{
         cursor: pointer;
     }
 
+    .flex_item:hover>.hover_underline {
+
+        width: 80%;
+        margin-left: 10%;
+
+    }
+
     #checkbox:checked + #body_borders+#body label{
         color: white;
     }
@@ -443,16 +453,13 @@ label, #toggle{
         width: 100vw;
     }
 
-    .flex_item:hover>.hover_underline {
-
-        width: 80%;
-        margin-left: 10%;
-
-    }
+    
 
     #bas_de_page{
         bottom: -30vh;
     }
+
+    
 
 }
 
@@ -500,6 +507,10 @@ label, #toggle{
 
     }
 
+    #body{
+        width: 100%;
+        margin-left: 0;
+    }
     
     #checkbox::before{
 
@@ -508,6 +519,10 @@ label, #toggle{
         top:2.5px;
         left:2.5px;   
     }
+
+    #toggle:checked + #flex_container {
+        left: 0;
+     }
     
     #checkbox:checked::before{
         left:14px;
@@ -517,6 +532,10 @@ label, #toggle{
 
     .flex_itm_footer{
         margin: 0;
+    }
+
+    #bas_de_page{
+        left: 0;
     }
 
 }
