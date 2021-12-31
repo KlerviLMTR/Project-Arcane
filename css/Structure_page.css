@@ -23,6 +23,7 @@
 
 
 html{
+<<<<<<< HEAD
     overflow-x: hidden;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,6 +40,8 @@ body {
     display: flex;
     flex-direction: column;
 =======
+=======
+>>>>>>> b4b367c (corrections background sticky + ajustements styles de texte)
     /* height:100%; */
     /* width: 100%; */
 >>>>>>> 6beafbd (Index et personnages sans ajustements)
@@ -416,8 +419,7 @@ body {
 
 /* Personnalisation des liens */
 .flex_item>a {
-    text-decoration: none;
-    font-family: Roboto, sans-serif;
+
     font-weight: bolder;
     position: absolute; 
     width:100%;
@@ -430,7 +432,7 @@ body {
 }
 
 #checkbox:checked+#body_borders+#body>#header>#flex_container>.flex_item>a {
-   color:rgb(209, 220, 224);
+   /* color:rgb(209, 220, 224); */
 }
 
 .flex_item>a:visited{
@@ -602,12 +604,14 @@ body {
 /* ------------ TITRE DE LA PAGE --------- */
 
 #flex_title{
+    z-index: 1;
     margin-top:30px;
     position:relative;
     top: 80px;
     display:flex;
     flex-direction: row;
-    height:100px;
+    height:120px;
+    margin-bottom: 50px;
    
 }
 
@@ -633,28 +637,33 @@ hr{
 }
 
 /* ------------------ IMAGE DE FOND -------------------- */
-#background_container{
-    position:sticky;
-    bottom:400px;
-    left:0;
-    width: 100vw;
-}
 
-#background_container img{
-    width: 100%;
+
+#background_container{
+    position:absolute;
+    height:4000px;
+    top:1350px;
+    left:-10vw;
+    width:100vw;
 }
 
 #background_img{
-    position: absolute;
-    z-index: 0;
-    left:-10vw;
-    opacity: 50%;
-    
-}
+    width:100%;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top:300px;
+    opacity:60%;
+} 
 
 #checkbox:checked+#body_borders+#body>#background_container>#background_img{
-    opacity: 35%;
+    opacity: 30%;
 }
+
+
+
 
 
 /* -------------------- FOOTER -----------------------------*/
