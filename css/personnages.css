@@ -144,13 +144,13 @@
 
 /* Caractéristiques des images */
 .img{
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   height: calc(80vw/3);
   width:100%;
 }
 
 .txt{
-    background-color: darkgrey;
+    /* background-color: darkgrey; */
 }
 
 .portrait {

@@ -28,3 +28,18 @@ iframe{
     width:89.5%;
     height:85% ;
 } 
+
+
+
+@media screen and (min-width:300px) and (max-width:800px) {
+    #vid_container{
+        width:300px;
+        height:170px;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:320px) {
+    #vid_container{
+        left: -8.5vw;
+    }
+}
