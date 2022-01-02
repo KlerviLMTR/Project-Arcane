@@ -69,7 +69,7 @@ li span{
     font-family: "Montserrat", "Open Sans", Arial, sans-serif;
     font-weight: 700;
     letter-spacing: 0px;
-    transform: all ease;
+    transition:  all 1s ease;
     text-decoration: none;
 
 }

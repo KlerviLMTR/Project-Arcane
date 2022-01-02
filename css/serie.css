@@ -6,6 +6,7 @@ table{
     margin-left:15%;
     width: 70%;
     margin-bottom: 50px;
+    border-spacing: 0;
 }
 
 tr{
@@ -38,10 +39,10 @@ p{
     background-color: white;
     width:70%;
     top:80px;
-    margin-left:15%;
+    margin:auto;
     height: fit-content;
-    border:5px solid white;
     border-radius: 20px;
+    z-index: 0;
 }
 
 
@@ -154,7 +155,7 @@ td { word-break: keep-all;}
 
 #casting_cont h2, #casting_cont li, #casting_cont span{
     top:0;
-    color:white;
+    color:black;
 }
 
 
@@ -164,21 +165,23 @@ td { word-break: keep-all;}
 }
 
 #checkbox:checked + #body_borders + #body #casting_cont {
-    background-color: #000000;
+    background-color: #090D0E;
 }
-
 #checkbox:checked + #body_borders + #body #casting_cont span {
-    color:#ff73;
+    color:rgb(218, 239, 245);
+}
+#checkbox:checked + #body_borders + #body #casting_cont li {
+    color:#ffbe73;
 }
 
 
 @media screen and (min-width:300px) and (max-width:600px) {
     #body, #body_borders{
-        height: 5000px;
+        height: 4645px;
     }
 
     #background_container{
-        height: 1150px;
+        height: 3295px;
     }
 
 
@@ -199,30 +202,41 @@ td { word-break: keep-all;}
 
 @media screen and (min-width:451px) and (max-width:600px) {
     #body, #body_borders{
-        height: 2050px;
+        height: 5070px;
     }
+
     #background_container{
-        height: 700px;
+        height: 3720px;
     }
 
 }
 
 @media screen and (min-width:601px) and (max-width:900px) {
     #body, #body_borders{
-        height: 5050px;
+        height: 6150px;
     }
     #background_container{
-        height: 3700px;
+        height: 4800px;
     }
 
 }
 
 @media screen and (min-width:901px)  {
     #body, #body_borders{
-        height: 4100px;
+        height: 5350px;
     }
     #background_container{
-        height: 2750px;
+        height: 4000px;
+    }
+
+}
+
+@media screen and (min-width:1050px)  {
+    #body, #body_borders{
+        height: 4950px;
+    }
+    #background_container{
+        height: 3600px;
     }
 
 }

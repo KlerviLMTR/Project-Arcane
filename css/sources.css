@@ -12,7 +12,7 @@ p{
 }
 
 li{
-    text-align: justify;
+    text-align: left;
 }
 
 #checkbox:checked+#body_borders+#body #src_cont{
@@ -47,6 +47,24 @@ li{
     ul{
         padding: 0%;
     }
+
+    #body, #body_borders{
+        height: 2310px;
+    }
+    #background_container{
+        height: 760px;
+    } 
+}
+
+@media screen and (min-width:301px) and (max-width:400px) {
+
+    #body, #body_borders{
+        height: 2410px;
+    }
+    #background_container{
+        height: 1060px;
+    }  
+
 }
 
 @media screen and (min-width:601px) and (max-width:900px) {
@@ -57,4 +75,22 @@ li{
     ul{
         padding: 0%;
     }
+
+    #body, #body_borders{
+        height: 1990px;
+    }
+    #background_container{
+        height: 540px;
+    }  
+}
+
+@media screen and (min-width:901px)  {
+
+    #body, #body_borders{
+        height: 2360px;
+    }
+    #background_container{
+        height: 1010px;
+    } 
+
 }
