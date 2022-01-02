@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Structure_page.css">
     <link rel="stylesheet" href="../css/textes.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <title>Arcane - Accueil</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="images/arcane_miniature.png">
+    <link rel="stylesheet" href="../css/about.css">
+    <title>A propos</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/arcane_miniature.png">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
         <header id="header">
             
             <div id="logo" >
-                <a href="index.html">
+                <a href="../index.html">
                     <img src="../images/Arcane-LogoLight-.png" alt="Logo Arcane">
                 </a>
                
@@ -37,27 +37,27 @@
                 <div class="flex_item">
                     <div class="hover_underline"></div>
 
-                    <a href="index.html">Accueil</a>
+                    <a href="../index.html">Accueil</a>
 
                 </div>
 
                 <div class="flex_item">
                     <div class="hover_underline"></div>
 
-                    <a href="html/serie.html">La série</a>
+                    <a href="serie.html">La série</a>
                 </div>
 
                 <div class="flex_item" id="flex_persos">
 
                     <div class="hover_underline"></div>
 
-                    <a href="html/personnages.html">Les personnages</a>
+                    <a href="personnages.html">Les personnages</a>
                 </div>
 
                 <div class="flex_item">
                     <div class="hover_underline"></div>
 
-                    <a href="html/about.html">À propos</a>
+                    <a href="about.html">À propos</a>
                 </div>
 
                 <div class="flex_item last_flex"> 
@@ -77,13 +77,11 @@
                 alt="Image de la ville de Piltover de nuit">
 
         </div>
-
-        <!-- TITRE PRINCIPAL  -->
-
+  
         <div id="flex_title">
             <img src="../images/Créas-Retouches/déco-titre-gauche2.svg" alt="">
             <div id="title_sep_cont">
-                <h1>Titre Principal</h1>
+                <h1>à propos</h1>
                 <div id="main_sep">  
                     <img src="../images/Vecteurs/Sep_principal.svg" alt=""> 
                     <hr> 
@@ -91,55 +89,55 @@
             </div>
             <img src="../images/Créas-Retouches/déco-titre-droit2.svg" alt="">
         </div>
-        
-        <main>
 
-            
+   
+        <div id="about_cont">
 
-            <p>Bienvenue sur notre fansite dédié à la série Arcane de Riot Games ! <br>
-                Plongez sans plus attendre dans l'univers de Runaterra, créé par RiotGames dans lequel prennent place les jeux League of Legends ou Teamfight Tactics.
+            <p>Nous sommes Florianne CORREIA et Klervi LE MONTREER, deux étudiantes en DUT informatique et fans de la série Arcane de Riot Games.</p>
+            <p>Ceci est le résultat d'un exercice pédagogique sur l'élaboration d'un site web statique responsive en Html et Css.
+                N’hésitez pas à nous contacter pour toute suggestion d’amélioration de notre site. Merci&nbsp;!
             </p>
 
-            <p>Au programme, une animation soignée par les studios français <a href="https://fr.forticheprod.com/" target="_blank" class="link">Fortiche</a>, des décors somptueux et la rencontre de personnages attachants.</p>
-            <p>Découvrez l'histoire de deux sœurs charismatiques autour desquelles se cristallise la lutte entre deux mondes. </p>
-            <br>
-            <h2>Bande Annonce</h2>
+            <h3>Nous contacter:</h3>
 
-            <div id="vid_container">
-                <iframe src="https://www.youtube.com/embed/3Svs_hl897c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <img id="ornement" src="../images/Vecteurs/Cadre1.svg" alt="Cadre ornemental de la vidéo">
+            <form action="mailto:klervi.le-montreer@etu.iut-tlse3.fr">
+                
+                
+                <input type="mail" id="mail" placeholder="Votre mail" required method="post" name="contact" enctype="text/plain"><br>
+                <textarea name="" id="message" cols="30" rows="10" required placeholder="Votre message"></textarea><br>
+                <input type="button" value="Envoyer" id="button">
+            </form>
 
-                <!-- 1, 2, 6, 7, 8, 9, 10,   -->
-            </div>
-
-            <div id="button_container">
-                <p><span id="arrow">➥</span> Pour en savoir plus sur l'univers d'Arcane, rendez-vous sur le site officiel de la série :</p>
-                <button> <a href="https://arcane.com/fr-fr/" target="_blank" >RIOT GAMES</a></button>
+            <hr>
+            
+            <div id="logos">
+                <img src="../images/logo_iut_info2.PNG" alt="Logo de l'IUT informatique Paul Sabatier">
+                <img src="../images/logo_univ-ps.png" alt="Logo de l'université Paul Sabatier">
             </div>
             
-            
-        </main>
+        </div>
 
 
 
+
+        
+       
         <div id ="background_container">
             <img id="background_img" src="../images/Visuels supplémentaires/fond_jinx_tattoo.png" alt="Fond de page nuages">
         </div>
-       
         
-        <div id="bas_de_page">
+        <div id="bas_de_page"></div>
         <footer id="footer">
             <div class="flex_itm_footer">
-                <a href="html/about.html">Mentions légales</a>
+                <a href="about.html">Mentions légales</a>
             </div>
             <div class="flex_itm_footer">
-                <a href="html/source.html">Source des images</a>
+                <a href="source.html">Source des images</a>
             </div>
             <div class="flex_itm_footer">
-                <a href="html/about.html">Nous contacter</a>
+                <a href="about.html">Nous contacter</a>
             </div>
         </footer>
-        </div>
     </div>
 
 

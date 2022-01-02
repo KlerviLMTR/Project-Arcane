@@ -8,19 +8,19 @@ h1,h2,p,span,a {
 /* mode sombre */
 #checkbox:checked + #body_borders + #body h1, #checkbox:checked + #body_borders + #body h2, #checkbox:checked + #body_borders + #body p, #checkbox:checked + #body_borders + #body span,
 #checkbox:checked + #body_borders + #body a,#checkbox:checked + #body_borders + #body th,#checkbox:checked + #body_borders + #body td {
-    color:rgb(198, 227, 235);
+    color:rgb(218, 239, 245);
 }
 
-h1,h2 {
+h1,h2,h3 {
 
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
     text-transform: uppercase;
     
 }
 
 a{
     text-decoration: none;
-    font-family: "Roboto", sans-serif; 
+    font-family: "Roboto", "Open Sans", Arial, sans-serif;
 }
 
 h1 {
@@ -28,7 +28,7 @@ h1 {
     letter-spacing: 5px;
     font-size: 3em;
     font-weight: 400;
-    font-family: "Oswald",sans-serif;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
     letter-spacing: 0.2em;
     font-size: 3em;
     font-weight: 450;
@@ -38,9 +38,90 @@ h1 {
     margin: 0;
 }
 
+h3{
+    text-align: left;
+    font-size:2.1em;
+}
 
-#checkbox:checked + #body_borders + #body  h1{
-    color:rgb(219, 239, 250);
+li{
+    list-style: none;
+    font-family: "Roboto", "Open Sans", Arial, sans-serif;
+    font-family: 'Roboto', "Open Sans", Arial, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center; 
+    position: relative;
+    z-index:2;
+
+}
+
+
+
+li span{
+    font-family:"Oswald", "Open Sans", Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+/* ----------- Style des liens "basiques" --------------- */
+.link{
+    display: inline-block;
+    color:#f8a3a3;
+    font-family: "Montserrat", "Open Sans", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0px;
+    transform: all ease;
+    text-decoration: none;
+
+}
+
+#checkbox:checked + #body_borders + #body .link{
+    color:#ECB040;
+}
+
+.link:hover,
+#checkbox:checked + #body_borders + #body .link:hover:before
+{   
+    text-decoration: underline;
+}
+
+
+
+/* Page "Série */
+
+#balises{
+    padding-left: 0;
+}
+
+#acces_rapide{
+    /* font-size: 1.8em; */
+    padding-bottom: 40px;
+    top:0;
+}
+
+#balises a{
+    font-size: 1.5em;
+}
+
+#balises a:hover::before {
+    content: "\00BB";
+    color: #d8a579;
+    padding: 0 10px;
+}
+
+#checkbox:checked + #body_borders + #body #balises a:hover::before {
+    color:#d8a579;
+}
+
+#synopsis, #episodes{
+    padding: 50px;
+    margin:0;
+}
+
+
+#checkbox:checked + #body_borders + #body  h1,
+#checkbox:checked + #body_borders + #body  h3,
+#checkbox:checked + #body_borders + #body #acces_rapide{
+    color:rgb(218, 239, 245);
 }
 
 
@@ -48,7 +129,7 @@ h2, .titre_tab {
    padding-left:10px;
    margin: 0 0 20px 0;
    letter-spacing: 12px;
-   font-size:2.8em;
+   font-size:2.6em;
    letter-spacing: 4px;
    font-weight: 600;
 }
@@ -63,7 +144,7 @@ p, td{
    padding-left: 10px;   
    letter-spacing: 1.5px;
    text-align:justify;
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Roboto', "Open Sans", Arial, sans-serif;
    font-size: 1.3em;
    font-weight: bold;
 }
@@ -73,11 +154,41 @@ td,td {
 }
 
 th {
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", "Open Sans", Arial, sans-serif;
     font-size:1.5em;
     font-weight: 300;
 }
 
+@media screen and (min-width:300px) and (max-width:600px) {
+    h1{
+        font-size: 2.5em;
+    }
+
+    table{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    th, td{
+        font-size: 0.8em;
+        padding: 10px;
+    }
+    p{
+        font-size: 0.8em;
+    }
+    
+
+    h2{
+        font-size: 1.9em;
+    }
+
+    #balises a{
+        font-size: 1.2em;
+    }
+
+    
+
+}
 
 @media screen and (min-width:601px) and (max-width: 900px) {
 
@@ -85,12 +196,14 @@ th {
         font-size: 1.8em;
     }
     p{
-        font-size: 0.5em;
+        font-size: 0.8em;
     }
 
     .vr{
         height: 80%;
     }
+
+    
 }
 
 @media screen and (min-width:901px) and (max-width: 1200px) {
