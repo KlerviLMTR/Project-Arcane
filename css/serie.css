@@ -43,6 +43,7 @@ p{
     height: fit-content;
     border-radius: 20px;
     z-index: 0;
+    padding: 30px;
 }
 
 
@@ -197,7 +198,12 @@ td { word-break: keep-all;}
     table{
         margin-left: 7%;
     }
-
+    
+    p{
+        width: 90%;
+        margin-left: 5%;
+        font-size: 0.9em;
+    }
 }
 
 @media screen and (min-width:451px) and (max-width:600px) {
@@ -209,6 +215,12 @@ td { word-break: keep-all;}
         height: 3720px;
     }
 
+    p{
+        width: 90%;
+        margin-left: 5%;
+        font-size: 0.9em;
+    }
+
 }
 
 @media screen and (min-width:601px) and (max-width:900px) {
@@ -217,6 +229,12 @@ td { word-break: keep-all;}
     }
     #background_container{
         height: 4800px;
+    }
+
+    p{
+        width: 90%;
+        margin-left: 5%;
+        font-size: 1.2em;
     }
 
 }

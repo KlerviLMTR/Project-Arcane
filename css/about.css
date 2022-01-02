@@ -1,5 +1,5 @@
 #about_cont{
-    top:120px;
+    top:60px;
     position: relative;
     width:70%;
     margin: auto;
@@ -116,7 +116,7 @@ hr{
 @media screen and (min-width:300px) and (max-width:600px) {
     #about_cont{
         padding: 30px;
-        padding-top: 0;
+        padding-top: 20px;
     }
 
     input, textarea{
@@ -133,10 +133,10 @@ hr{
 
 
     #body, #body_borders{
-        height: 1770px;
+        height: 1720px;
     }
     #background_container{
-        height: 420px;
+        height: 370px;
     } 
         
 }
@@ -147,20 +147,20 @@ hr{
     }
 
     #body, #body_borders{
-        height: 2100px;
+        height: 2050px;
     }
     #background_container{
-        height: 750px;
+        height: 700px;
     } 
 }
 
 @media screen and (min-width:901px) and (max-width:1000px) {
 
     #body, #body_borders{
-        height: 2360px;
+        height: 2310px;
     }
     #background_container{
-        height: 1010px;
+        height: 960px;
     } 
 
 }
@@ -168,10 +168,10 @@ hr{
 @media screen and (min-width:1001px){
 
     #body, #body_borders{
-        height: 2070px;
+        height: 2020px;
     }
     #background_container{
-        height: 720px;
+        height: 670px;
     } 
 
 }
@@ -179,10 +179,10 @@ hr{
 @media screen and (min-width:1200px){
 
     #body, #body_borders{
-        height: 2100px;
+        height: 2050px;
     }
     #background_container{
-        height: 750px;
+        height: 700px;
     } 
 
 }
@@ -190,10 +190,10 @@ hr{
 @media screen and (min-width:1400px){
 
     #body, #body_borders{
-        height: 2300px;
+        height: 2250px;
     }
     #background_container{
-        height: 950px;
+        height: 900px;
     } 
 
 }
@@ -201,10 +201,10 @@ hr{
 @media screen and (min-width:1800px){
 
     #body, #body_borders{
-        height: 2420px;
+        height: 2370px;
     }
     #background_container{
-        height: 1070px;
+        height: 1020px;
     } 
 
 }

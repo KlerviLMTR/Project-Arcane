@@ -118,6 +118,7 @@ button{
 }
 
 button:hover{
+    cursor:pointer;
     transition:0.4s;
     top:3px;
     border-color:rgb(86, 126, 89);

@@ -49,20 +49,27 @@ li{
     }
 
     #body, #body_borders{
-        height: 2310px;
+        height: 2400px;
     }
     #background_container{
-        height: 760px;
+        height: 850px;
     } 
+
+    p{
+        width: 90%;
+        margin-left: 5%;
+        font-size: 0.9em;
+        padding: 0;
+    }
 }
 
 @media screen and (min-width:301px) and (max-width:400px) {
 
     #body, #body_borders{
-        height: 2410px;
+        height: 2810px;
     }
     #background_container{
-        height: 1060px;
+        height: 1460px;
     }  
 
 }
@@ -77,11 +84,17 @@ li{
     }
 
     #body, #body_borders{
-        height: 1990px;
+        height: 2280px;
     }
     #background_container{
-        height: 540px;
+        height: 930px;
     }  
+
+    p{
+        width: 90%;
+        margin-left: 5%;
+        font-size: 1.2em;
+    }
 }
 
 @media screen and (min-width:901px)  {

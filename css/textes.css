@@ -71,6 +71,8 @@ li span{
     letter-spacing: 0px;
     transition:  all 1s ease;
     text-decoration: none;
+    position: relative;
+    z-index: 1;
 
 }
 
