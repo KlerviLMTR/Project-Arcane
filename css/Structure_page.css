@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 
+<<<<<<< HEAD
 
 >>>>>>> 6beafbd (Index et personnages sans ajustements)
 =======
@@ -61,6 +62,8 @@ body {
 
 >>>>>>> ef87c11 (Copie du projet initial)
 
+=======
+>>>>>>> 35758d1 (Fin du projet ?)
 #checkbox{
     position:fixed;
     top:20px;
@@ -764,7 +767,7 @@ label, #toggle{
 /* -------------------- MEDIA QUERIES -------------------------- */
 
 /* Ecrans "tablette" */
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1100px){
  
     #flex_container
     {

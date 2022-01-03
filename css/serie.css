@@ -30,6 +30,7 @@ h2{
 #acces_rapide {
     font-size: 1em;
     top:50px;
+    margin-bottom: 50px;
 }
 
 
@@ -104,7 +105,7 @@ p{
     padding:0 0 0 15px;
     margin:0;
     text-align: left;
-    align-self:flex-start;
+    align-self:center;
     top:0;
     color:rgb(148, 130, 121);
 }
@@ -223,11 +224,11 @@ td { word-break: keep-all;}
 
 @media screen and (min-width:300px) and (max-width:600px) {
     #body, #body_borders{
-        height: 4645px;
+        height: 4670px;
     }
 
     #background_container{
-        height: 3295px;
+        height: 3320px;
     }
 
 
@@ -255,6 +256,13 @@ td { word-break: keep-all;}
         margin-left: 5%;
         font-size: 0.9em;
     }
+
+    .flex_li span {
+        padding:0;
+        margin:0;
+        text-align: right;
+        font-size: 1em;
+    }
 }
 
 @media screen and (min-width:451px) and (max-width:600px) {
@@ -270,6 +278,13 @@ td { word-break: keep-all;}
         width: 90%;
         margin-left: 5%;
         font-size: 0.9em;
+    }
+
+    .flex_li span {
+        padding:0;
+        margin:0;
+        text-align: right;
+        font-size: 1em;
     }
 
 }
@@ -292,20 +307,20 @@ td { word-break: keep-all;}
 
 @media screen and (min-width:901px)  {
     #body, #body_borders{
-        height: 5350px;
+        height: 5720px;
     }
     #background_container{
-        height: 4000px;
+        height: 4370px;
     }
 
 }
 
 @media screen and (min-width:1050px)  {
     #body, #body_borders{
-        height: 4950px;
+        height: 5330px;
     }
     #background_container{
-        height: 3600px;
+        height: 3980px;
     }
 
 }
