@@ -1,5 +1,5 @@
 #about_cont{
-    top:60px;
+    top:80px;
     position: relative;
     width:70%;
     margin: auto;
@@ -74,6 +74,8 @@ hr{
 
 }
 
+
+
 #mail:focus, #message:focus{
     outline: 2px solid rgb(236, 176, 64);
 }
@@ -105,11 +107,17 @@ hr{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    flex-direction: row;
 }
-#logos img{
+#logos a{
     width: 50%;
     height: fit-content;
     flex: 1;
+}
+
+#logos a img {
+    margin-left: 22.5%;
+    width: 250px;
 }
 
 
@@ -162,6 +170,21 @@ hr{
     #background_container{
         height: 960px;
     } 
+
+}
+
+@media screen  and (max-width:900px) {
+    #logos{
+        flex-direction: column;
+        
+    }
+
+    #logos a img {
+        margin-top:20px;
+        position: relative;
+        width:100%;
+        margin-left:5%;
+    }
 
 }
 

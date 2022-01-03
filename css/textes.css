@@ -60,6 +60,7 @@ li{
 li span{
     font-family:"Oswald", "Open Sans", Arial, sans-serif;
     font-size: 1.2em;
+
 }
 
 /* ----------- Style des liens "basiques" --------------- */
@@ -147,13 +148,14 @@ p, td{
    letter-spacing: 1.5px;
    text-align:justify;
    font-family: 'Roboto', "Open Sans", Arial, sans-serif;
-   font-size: 1.3em;
+   font-size: 1.25em;
    font-weight: bold;
 }
 
 td,td {
     text-align:center;
 }
+
 
 th {
     font-family: "Oswald", "Open Sans", Arial, sans-serif;

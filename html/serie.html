@@ -32,7 +32,11 @@
 
             <label for="toggle">☰</label>
             <input type="checkbox" id="toggle">
-            <div id="flex_container">
+
+
+            <!-- ---------- MENU ----------- -->
+
+            <menu id="flex_container">
 
                 <div class="flex_item">
                     <div class="hover_underline"></div>
@@ -57,13 +61,13 @@
                 <div class="flex_item">
                     <div class="hover_underline"></div>
 
-                    <a href="about.html">À propos</a>
+                    <a href="A_propos.html">À propos</a>
                 </div>
 
                 <div class="flex_item last_flex"> 
                 </div>
 
-            </div>
+            </menu>
 
 
         </header>
@@ -102,9 +106,10 @@
             <li><a href="#episodes">Liste des épisodes</a></li>
             <li><a href="#casting_cont">Casting</a></li>
         </ul>
-
-        <h2 id="synopsis">Synopsis</h2>
-        <p>Championnes de leurs villes jumelles et rivales (la huppée Piltover et la sous-terraine Zaun), deux sœurs Vi et Powder se battent dans une guerre où font rage des technologies magiques et des perspectives diamétralement opposées.</p>
+        <article>
+            <h2 id="synopsis">Synopsis</h2>
+            <p>Championnes de leurs villes jumelles et rivales (la huppée Piltover et la sous-terraine Zaun), deux sœurs Vi et Powder se battent dans une guerre où font rage des technologies magiques et des perspectives diamétralement opposées.</p>
+        </article>
 
         <h2  id="episodes">Liste des épisodes</h2>
         <table>
@@ -118,7 +123,7 @@
             </tr>
 
             <tr class="impair">
-                <th>Épisode 1 :<br>Welcome to the playground</th>
+                <th>Épisode 1 :<br> <span class="episode_name"> Welcome to the playground</span></th>
                 <td>Les sœurs orphelines Vi et Powder causent des remous dans les rues souterraines de Zaun à la suite d'un braquage dans le très huppé Piltover.</td>
             </tr>
 
@@ -128,7 +133,7 @@
             </tr>
 
             <tr class="pair">
-                <th>Épisode 2 :<br>Some Mysteries are better left unsolved</th>
+                <th>Épisode 2 :<br><span class="episode_name">Some Mysteries are better left unsolved</span></th>
                 <td>Idéaliste, le chercheur Jayce tente de maîtriser la magie par la science malgré les avertissements de son mentor. Le criminel Silco teste une substance puissante.  </td>
             </tr>
 
@@ -138,7 +143,7 @@
             </tr>
 
             <tr class="impair end_act">
-                <th>Épisode 3 :<br>The base violence necessary for change</th>
+                <th>Épisode 3 :<br><span class="episode_name">The base violence necessary for change</span></th>
                 <td>Deux anciens rivaux s'affrontent lors d'un défi spectaculaire qui se révèle fatidique pour Zaun. Jayce et Viktor prennent de gros risques pour leurs recherches. </td>
             </tr>
 
@@ -155,7 +160,7 @@
             </tr>
 
             <tr class="impair">
-                <th>Épisode 4 :<br>Happy Progress Day !</th>
+                <th>Épisode 4 :<br><span class="episode_name">Happy Progress Day&nbsp;!</span></th>
                 <td>Alors que Piltover profite de leur technologie, Jayce et Viktor réfléchissent à ce qu'ils vont faire. Un visage familier ressort de Zaun pour semer la pagaille. </td>
             </tr>
 
@@ -165,7 +170,7 @@
             </tr>
 
             <tr class="pair">
-                <th>Épisode 5 :<br>Everybody wants to be my enemy</th>
+                <th>Épisode 5 :<br><span class="episode_name">Everybody wants to be my enemy</span></th>
                 <td>Caitlyn, la pacifieuse qui n'en fait qu'à sa tête, arpente les bas-fonds pour trouver Silco. Jayce devient une cible en combattant la corruption à Piltover. </td>
             </tr>
 
@@ -175,7 +180,7 @@
             </tr>
 
             <tr class="impair end_act">
-                <th>Épisode 6 :<br>When these walls come tumbling down</th>
+                <th>Épisode 6 :<br><span class="episode_name">When these walls come tumbling down</span></th>
                 <td>Un protégé discrédite son mentor devant le Conseil à cause de l'évolution rapide d'une technologie magique. Poursuivie par les autorités, Jinx doit affronter son passé.</td>
             </tr>
 
@@ -192,7 +197,7 @@
             </tr>
 
             <tr class="impair">
-                <th >Épisode 7 :<br>The boy saviour</th>
+                <th >Épisode 7 :<br><span class="episode_name">The boy saviour</span></th>
                 <td>Un protégé discrédite son mentor devant le Conseil à cause de l'évolution rapide d'une technologie magique. Poursuivie par les autorités, Jinx doit affronter son passé. </td>
             </tr>
 
@@ -202,7 +207,7 @@
             </tr>
 
             <tr class="pair">
-                <th>Épisode 8 :<br>Oil and water</th>
+                <th>Épisode 8 :<br><span class="episode_name">Oil and water</span></th>
                 <td>L'héritière désavouée Mel et sa mère échangent des tactiques de combat. Caitlyn et Vi forgent une alliance improbable. Jinx subit une étonnante transformation. </td>
             </tr>
 
@@ -211,7 +216,7 @@
             </tr>
 
             <tr class="impair end_act">
-                <th>Épisode 9 :<br>The monster you created</th>
+                <th>Épisode 9 :<br><span class="episode_name">The monster you created</span></th>
                 <td>À deux doigts d'entrer en guerre, les chefs de Piltover et de Zaun sont face à un ultimatum, jusqu'à ce qu'un affrontement fatidique bouleverse les deux villes à jamais. </td>
             </tr>
         </table>
@@ -220,28 +225,56 @@
         <h2>Casting</h2>
 
         <ul>
-            <li><span>Hailee Steinfiel</span>  : Vi</li>
-            <li><span>Ella Purnell :</span>  Powder / Jinx</li>
-            <li><span>Kevin Alejandro :</span>   Jayce Talis</li>
-            <li><span>Katie Leung :</span>  Caitlyn Kiramman</li>
-            <li><span>Harry Lloyd :</span>  Viktor</li>
-            <li><span>Jason Spisak : </span> Silco</li>
-            <li><span>Toks Olagundoye :</span>  Mel Medarda</li>
-            <li><span>J.B. Blanc :</span>  Vander</li>
-            <li><span>Reed Shannon :</span>  Ekko</li>
+            <li class="flex_li">
+                <span>Hailee Steinfiel :</span>
+                <p>Vi</p>
+            </li>
+
+            <li class="flex_li">
+                <span>Ella Purnell : </span>
+                  <p> Powder / Jinx</p>
+            </li>
+            <li class="flex_li">
+                <span>Kevin Alejandro : </span>
+                <p>Jayce</p>
+            </li>
+            <li class="flex_li">
+                <span>Katie Leung : </span> 
+                <p> Caitlyn</p>
+            </li>
+            <li class="flex_li">
+                <span>Harry Lloyd : </span> 
+                <p> Viktor</p>
+            </li>
+            <li class="flex_li">
+                <span>Jason Spisak : </span> 
+                <p>Silco</p>
+            </li>
+            <li class="flex_li">
+                <span>Toks Olagundoye : </span> 
+                <p> Mel</p>
+            </li>
+            <li class="flex_li">
+                <span>J.B. Blanc : </span> 
+                <p> Vander</p>
+            </li>
+            <li class="flex_li">
+                <span>Reed Shannon : </span> 
+                <p> Ekko</p>
+            </li>
         </ul>
         </article> 
         
         <div id="bas_de_page">
             <footer id="footer">
                 <div class="flex_itm_footer">
-                    <a href="about.html">Mentions légales</a>
+                    <a href="A_propos.html">Mentions légales</a>
                 </div>
                 <div class="flex_itm_footer">
                     <a href="source.html">Source des images</a>
                 </div>
                 <div class="flex_itm_footer">
-                    <a href="about.html">Nous contacter</a>
+                    <a href="A_propos.html">Nous contacter</a>
                 </div>
             </footer>
         </div>
