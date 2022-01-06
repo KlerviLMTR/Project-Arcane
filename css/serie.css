@@ -224,11 +224,11 @@ td { word-break: keep-all;}
 
 @media screen and (min-width:300px) and (max-width:600px) {
     #body, #body_borders{
-        height: 4670px;
+        height: 4830px;
     }
 
     #background_container{
-        height: 3320px;
+        height: 3480px;
     }
 
 

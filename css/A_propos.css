@@ -110,6 +110,10 @@ li{
     font-size: 1.4em;
 }
 
+ul{
+    padding: 0;
+}
+
 #checkbox:checked+ #body_borders + #body ul {
     color:rgb(209, 139, 139);
 }
@@ -162,10 +166,10 @@ li{
 
 
     #body, #body_borders{
-        height: 1720px;
+        height: 1940px;
     }
     #background_container{
-        height: 370px;
+        height: 590px;
     } 
     li{
         font-size: 1em;
@@ -192,10 +196,10 @@ li{
 @media screen and (min-width:901px) and (max-width:1000px) {
 
     #body, #body_borders{
-        height: 2310px;
+        height: 2050px;
     }
     #background_container{
-        height: 960px;
+        height: 700px;
     } 
 
 }
@@ -218,10 +222,10 @@ li{
 @media screen and (min-width:1001px){
 
     #body, #body_borders{
-        height: 2020px;
+        height: 2050px;
     }
     #background_container{
-        height: 670px;
+        height: 700px;
     } 
 
 }
@@ -229,10 +233,10 @@ li{
 @media screen and (min-width:1200px){
 
     #body, #body_borders{
-        height: 2050px;
+        height: 2090px;
     }
     #background_container{
-        height: 700px;
+        height: 740px;
     } 
 
 }

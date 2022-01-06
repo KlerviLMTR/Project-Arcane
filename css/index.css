@@ -209,12 +209,12 @@ button{
     }
 
     #body, #body_borders{
-        height: 1400px;
+        height: 1470px;
     }
 
     #background_container{
         top:750px;
-        height: 650px;
+        height: 720px;
     }
 
     iframe{
@@ -256,11 +256,11 @@ button{
     }
 
     #body, #body_borders{
-        height: 2100px;
+        height: 2120px;
     }
 
     #background_container{
-        height: 750px;
+        height: 770px;
     }
     
 }

@@ -360,7 +360,17 @@
     
 }
 
-@media screen and (min-width:441px) and (max-width: 600px) {
+@media screen and (min-width:441px) and (max-width: 520px) {
+    #body, #body_borders{
+        height: 6800px;
+    }
+    #background_container{
+        height: 5450px;
+    } 
+    
+}
+
+@media screen and (min-width:521px) and (max-width: 600px) {
     #body, #body_borders{
         height: 7240px;
     }
@@ -371,29 +381,29 @@
 }
 
 
-@media screen and (min-width:601px) and (max-width: 900px) {
+@media screen and (min-width:601px) and (max-width: 700px) {
     #body, #body_borders{
-        height: 3550px;
+        height: 4500px;
     }
     #background_container{
-        height: 2200px;
+        height: 3250px;
     } 
     
 }
 
-@media screen and (min-width:700px) and (max-width: 800px) {
+@media screen and (min-width:701px) and (max-width: 900px) {
     #body, #body_borders{
-        height: 3350px;
+        height: 4220px;
     }
     #background_container{
-        height: 2000px;
+        height: 2870px;
     } 
     
 }
 
-@media screen and (min-width:901px) and (max-width: 1000px) {
+@media screen and (min-width:901px)  {
     #body, #body_borders{
-        height: 5600px;
+        height: 4700px;
     }
     #background_container{
         height: 4250px;
@@ -401,15 +411,16 @@
     
 }
 
-@media screen and (min-width:1001px)  {
+@media screen and (min-width:1200px)  {
     #body, #body_borders{
-        height: 5250px;
+        height: 4870px;
     }
     #background_container{
-        height: 3900px;
+        height: 3520px;
     } 
     
 }
+
 
 @media screen and (min-width:1800px)  {
     #body, #body_borders{

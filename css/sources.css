@@ -49,10 +49,10 @@ li{
     }
 
     #body, #body_borders{
-        height: 2400px;
+        height: 2560px;
     }
     #background_container{
-        height: 850px;
+        height: 960px;
     } 
 
     p{
@@ -66,10 +66,10 @@ li{
 @media screen and (min-width:301px) and (max-width:400px) {
 
     #body, #body_borders{
-        height: 2810px;
+        height: 3210px;
     }
     #background_container{
-        height: 1460px;
+        height: 1860px;
     }  
 
 }
@@ -84,10 +84,10 @@ li{
     }
 
     #body, #body_borders{
-        height: 2280px;
+        height: 2480px;
     }
     #background_container{
-        height: 930px;
+        height: 1130px;
     }  
 
     p{
