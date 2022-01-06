@@ -486,6 +486,13 @@ label, #toggle{
         right:9vw;
     }
 
+    .flex_item:hover>.hover_underline {
+
+        width: 80%;
+        margin-left: 10%;
+
+    }
+
 }
 /* Petits écrans */
 @media screen and (min-width: 300px) and (max-width:600px) {
@@ -506,12 +513,7 @@ label, #toggle{
         width: 100vw;
     }
 
-    .flex_item:hover>.hover_underline {
 
-        width: 80%;
-        margin-left: 10%;
-
-    }
 
 }
 
