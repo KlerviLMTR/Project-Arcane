@@ -72,7 +72,7 @@ p{
 
 /* Titres */
 .titre_tab{
-    border-top: 7px solid rgb(148, 130, 121);
+    border-top: 7px solid #9ea8bb; 
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: rgb(255, 247, 247);
@@ -107,7 +107,7 @@ p{
     text-align: left;
     align-self:center;
     top:0;
-    color:rgb(148, 130, 121);
+    color:#5372af; 
 }
 
 
@@ -138,12 +138,12 @@ p{
 
 
 .end_act th{
-    border-bottom: 7px solid rgb(148, 130, 121);
+    border-bottom: 7px solid #9ea8bb; 
     border-bottom-left-radius: 20px;
 }
 
 .end_act td{
-    border-bottom: 7px solid rgb(148, 130, 121);
+    border-bottom: 7px solid #9ea8bb; 
     border-bottom-right-radius: 20px;
 }
 
